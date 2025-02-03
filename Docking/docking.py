@@ -8,9 +8,24 @@ import platform
 import threading
 import queue
 import time
-from multiprocessing import Pool
+import json
+from multiprocessing import Pool, cpu_count
 from functools import partial
 import shutil
+
+from pathlib import Path
+
+# Путь к текущей директории, где находится mol_process.py
+BASE_DIR = Path(__file__).parent
+
+# Путь к конфигу относительно скрипта
+CONFIG_PATH = BASE_DIR / "config.json"
+
+def get_path(path_str: str) -> Path:
+    """Преобразует строку пути в абсолютный путь."""
+    path = Path(path_str)
+    return path if path.is_absolute() else BASE_DIR.parent / path
+
 
 def prepare_grid_parameter_file(receptor_path, grid_center, grid_size, spacing=0.375):
     """
@@ -451,15 +466,20 @@ def process_single_ligand(ligand_path, args, receptor_name):
         return False
     
 def main():
+
+    config_path = sys.argv[1]
+
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = json.load(f)
+
     args = {
-        "receptor": r"C:/Docking/receptor.pdbqt",
-        "ligands_dir": r"C:/Docking/ligands",
-        "grid_center": "17.373,6.64,3.199",
-        "grid_size": "80,40,40",
-        "output_dir": r"C:/Docking/results",
-        "ga_runs": 3
+        "receptor": get_path(config["receptor"]),
+        "ligands_dir": get_path(config["ligands_dir"]),
+        "grid_center": config["grid_center"],
+        "grid_size": config["grid_size"],
+        "output_dir": get_path(config["output_dir"]),
+        "ga_runs": config["ga_runs"]
     }
-    
     # Настройка и проверки
     os.makedirs(args["output_dir"], exist_ok=True)
     setup_logging()
@@ -481,7 +501,7 @@ def main():
         if not run_autogrid(gpf_file) or not check_grid_files(receptor_name):
             logging.error("Grid preparation failed")
             return
-        
+    
         # Получаем список всех лигандов
         ligand_files = list(Path(args["ligands_dir"]).glob("*.pdbqt"))
         if not ligand_files:
@@ -503,7 +523,7 @@ def main():
             return
 
         # Определяем количество процессов
-        num_processes = 2
+        num_processes = 1 # Оставляем один ядро свободным
         logging.info(f"Starting parallel processing with {num_processes} processes")
         
         # Создаем частичную функцию с фиксированными аргументами

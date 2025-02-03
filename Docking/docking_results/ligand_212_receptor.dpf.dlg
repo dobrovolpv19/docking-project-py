@@ -1,0 +1,1418 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			0:51 51" a.m., 01/29/2025
+                   on host:		"LPT00508"
+Current Working Directory = "C:\Users\yhalias\Downloads\docking-project-py\Docking\temp_process_19072"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 32104, 1738108311.
+Docking parameter file (DPF) used for this docking:		ligand_212_receptor.dpf
+DPF> autodock_parameter_version 4.2
+
+	Autodock parameter version 4.2.
+DPF> outlev 1
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> set_psw1 none
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> intelec                                      # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                                # seeds for random generator
+
+Random number generator was seeded with values 32104, 1738108311.
+DPF> ligand_types A C HD N OA SA NA S Cl F Br P I             # atoms types in ligand
+
+DPF> fld receptor.maps.fld                 # grid_data_file
+
+Opening Grid Map Dimensions file:		receptor.maps.fld
+Grid Point Spacing =				0.375 Angstroms
+
+Even Number of User-specified Grid Points =	80 x-points
+						40 y-points
+						40 z-points
+
+Coordinates of Central Grid Point of Maps =	(17.373, 6.640, 3.199)
+Macromolecule file used to create Grid Maps =	C:/Users/yhalias/Downloads/chemistryProject/receptor/receptor.pdbqt
+Grid Parameter file used to create Grid Maps =	receptor.gpf
+Minimum coordinates in grid = (2.373, -0.860, -4.301)
+Maximum coordinates in grid = (32.373, 14.140, 10.699)
+
+DPF> map receptor.A.map
+
+DPF> map receptor.C.map
+
+DPF> map receptor.HD.map
+
+DPF> map receptor.N.map
+
+DPF> map receptor.NA.map
+
+DPF> map receptor.OA.map
+
+DPF> map receptor.SA.map
+
+DPF> map receptor.S.map
+
+DPF> map receptor.Cl.map
+
+DPF> map receptor.F.map
+
+DPF> map receptor.Br.map
+
+DPF> map receptor.P.map
+
+DPF> map receptor.I.map
+
+DPF> elecmap receptor.e.map                # electrostatics map
+
+DPF> desolvmap receptor.d.map              # desolvation map
+
+DPF> move ligand_212.pdbqt                           # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "ligand_212.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  18 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: C3_3  and  C35_35 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: C5_5  and  N2_47 
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: C6_6  and  C7_7 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C6_6  and  N2_47 
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: C9_9  and  N4_49 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C11_11  and  N4_49 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C11_11  and  N5_50 
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: C12_12  and  N5_50 
+INPUT-LIGAND-PDBQT: REMARK    6  A    between atoms: C14_14  and  C17_17 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C17_17  and  N7_52 
+INPUT-LIGAND-PDBQT: REMARK    7  A    between atoms: C18_18  and  N7_52 
+INPUT-LIGAND-PDBQT: REMARK    8  A    between atoms: C20_20  and  C23_23 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C23_23  and  N9_54 
+INPUT-LIGAND-PDBQT: REMARK    9  A    between atoms: C24_24  and  N9_54 
+INPUT-LIGAND-PDBQT: REMARK   10  A    between atoms: C28_28  and  S2_74 
+INPUT-LIGAND-PDBQT: REMARK   11  A    between atoms: C29_29  and  S1_73 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C35_35  and  N10_55 
+INPUT-LIGAND-PDBQT: REMARK   12  A    between atoms: C36_36  and  N10_55 
+INPUT-LIGAND-PDBQT: REMARK   13  A    between atoms: C40_40  and  S4_76 
+INPUT-LIGAND-PDBQT: REMARK   14  A    between atoms: C41_41  and  S3_75 
+INPUT-LIGAND-PDBQT: REMARK   15  A    between atoms: O7_62  and  S1_73 
+INPUT-LIGAND-PDBQT: REMARK   16  A    between atoms: O10_65  and  S2_74 
+INPUT-LIGAND-PDBQT: REMARK   17  A    between atoms: O14_69  and  S3_75 
+INPUT-LIGAND-PDBQT: REMARK   18  A    between atoms: O17_72  and  S4_76 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: HETATM    1  C11 UNL     1      -0.539  -0.317   0.392  1.00  0.00     0.327 C 
+INPUT-LIGAND-PDBQT: HETATM    2  N4  UNL     1       0.236  -0.335  -0.761  1.00  0.00    -0.294 N 
+INPUT-LIGAND-PDBQT: HETATM    3  N5  UNL     1      -1.847  -0.658   0.072  1.00  0.00    -0.294 N 
+INPUT-LIGAND-PDBQT: HETATM    4  O2  UNL     1      -0.133  -0.044   1.514  1.00  0.00    -0.247 OA
+INPUT-LIGAND-PDBQT: HETATM    5  H32 UNL     1      -0.059  -1.017  -1.448  1.00  0.00     0.172 HD
+INPUT-LIGAND-PDBQT: HETATM    6  H33 UNL     1      -2.136  -0.368  -0.853  1.00  0.00     0.172 HD
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   2   7
+INPUT-LIGAND-PDBQT: HETATM    7  C9  UNL     1       1.569   0.039  -0.823  1.00  0.00     0.111 A 
+INPUT-LIGAND-PDBQT: HETATM    8  C10 UNL     1       2.494  -0.468  -1.716  1.00  0.00     0.067 A 
+INPUT-LIGAND-PDBQT: HETATM    9  C7  UNL     1       3.767   0.115  -1.452  1.00  0.00     0.051 A 
+INPUT-LIGAND-PDBQT: HETATM   10  C8  UNL     1       3.552   1.024  -0.430  1.00  0.00     0.109 A 
+INPUT-LIGAND-PDBQT: HETATM   11  N3  UNL     1       2.215   1.003  -0.084  1.00  0.00    -0.346 N 
+INPUT-LIGAND-PDBQT: HETATM   12  C34 UNL     1       1.639   1.986   0.811  1.00  0.00     0.157 C 
+INPUT-LIGAND-PDBQT: BRANCH   9  13
+INPUT-LIGAND-PDBQT: HETATM   13  C6  UNL     1       5.016  -0.187  -2.161  1.00  0.00     0.258 C 
+INPUT-LIGAND-PDBQT: HETATM   14  N2  UNL     1       6.144   0.326  -1.549  1.00  0.00    -0.309 N 
+INPUT-LIGAND-PDBQT: HETATM   15  H31 UNL     1       6.031   0.618  -0.587  1.00  0.00     0.170 HD
+INPUT-LIGAND-PDBQT: HETATM   16  O1  UNL     1       4.996  -0.877  -3.174  1.00  0.00    -0.267 OA
+INPUT-LIGAND-PDBQT: BRANCH  14  17
+INPUT-LIGAND-PDBQT: HETATM   17  C5  UNL     1       7.452   0.201  -1.987  1.00  0.00     0.110 A 
+INPUT-LIGAND-PDBQT: HETATM   18  C4  UNL     1       8.561   0.331  -1.172  1.00  0.00     0.067 A 
+INPUT-LIGAND-PDBQT: HETATM   19  C3  UNL     1       9.740   0.081  -1.932  1.00  0.00     0.051 A 
+INPUT-LIGAND-PDBQT: HETATM   20  C2  UNL     1       9.301  -0.137  -3.226  1.00  0.00     0.109 A 
+INPUT-LIGAND-PDBQT: HETATM   21  N1  UNL     1       7.924  -0.015  -3.263  1.00  0.00    -0.346 N 
+INPUT-LIGAND-PDBQT: HETATM   22  C1  UNL     1       7.199   0.030  -4.516  1.00  0.00     0.157 C 
+INPUT-LIGAND-PDBQT: BRANCH  19  23
+INPUT-LIGAND-PDBQT: HETATM   23  C35 UNL     1      11.112   0.087  -1.406  1.00  0.00     0.257 C 
+INPUT-LIGAND-PDBQT: HETATM   24  N10 UNL     1      12.068  -0.355  -2.303  1.00  0.00    -0.323 N 
+INPUT-LIGAND-PDBQT: HETATM   25  H36 UNL     1      11.725  -0.679  -3.195  1.00  0.00     0.169 HD
+INPUT-LIGAND-PDBQT: HETATM   26  O11 UNL     1      11.328   0.453  -0.256  1.00  0.00    -0.267 OA
+INPUT-LIGAND-PDBQT: BRANCH  24  27
+INPUT-LIGAND-PDBQT: HETATM   27  C36 UNL     1      13.461  -0.451  -2.108  1.00  0.00     0.035 A 
+INPUT-LIGAND-PDBQT: HETATM   28  C37 UNL     1      14.119  -0.058  -0.940  1.00  0.00     0.042 A 
+INPUT-LIGAND-PDBQT: HETATM   29  C38 UNL     1      15.516  -0.180  -0.813  1.00  0.00    -0.022 A 
+INPUT-LIGAND-PDBQT: HETATM   30  C39 UNL     1      16.177   0.213   0.362  1.00  0.00     0.039 A 
+INPUT-LIGAND-PDBQT: HETATM   31  C43 UNL     1      16.268  -0.706  -1.884  1.00  0.00    -0.024 A 
+INPUT-LIGAND-PDBQT: HETATM   32  C40 UNL     1      17.569   0.085   0.483  1.00  0.00     0.096 A 
+INPUT-LIGAND-PDBQT: HETATM   33  C41 UNL     1      18.315  -0.429  -0.582  1.00  0.00     0.096 A 
+INPUT-LIGAND-PDBQT: HETATM   34  C42 UNL     1      17.660  -0.828  -1.758  1.00  0.00     0.039 A 
+INPUT-LIGAND-PDBQT: HETATM   35  C44 UNL     1      15.604  -1.098  -3.054  1.00  0.00     0.014 A 
+INPUT-LIGAND-PDBQT: HETATM   36  C45 UNL     1      14.217  -0.971  -3.163  1.00  0.00     0.030 A 
+INPUT-LIGAND-PDBQT: BRANCH  32  37
+INPUT-LIGAND-PDBQT: HETATM   37  S4  UNL     1      18.325   0.655   1.979  1.00  0.00     0.131 S 
+INPUT-LIGAND-PDBQT: HETATM   38  O15 UNL     1      18.319  -0.430   2.930  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: HETATM   39  O16 UNL     1      19.523   1.389   1.622  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: BRANCH  37  40
+INPUT-LIGAND-PDBQT: HETATM   40  O17 UNL     1      17.302   1.746   2.580  1.00  0.00    -0.292 OA
+INPUT-LIGAND-PDBQT: HETATM   41  H40 UNL     1      17.213   1.572   3.543  1.00  0.00     0.232 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  37  40
+INPUT-LIGAND-PDBQT: ENDBRANCH  32  37
+INPUT-LIGAND-PDBQT: BRANCH  33  42
+INPUT-LIGAND-PDBQT: HETATM   42  S3  UNL     1      20.077  -0.663  -0.490  1.00  0.00     0.131 S 
+INPUT-LIGAND-PDBQT: HETATM   43  O12 UNL     1      20.495  -1.331  -1.704  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: HETATM   44  O13 UNL     1      20.366  -1.227   0.807  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: BRANCH  42  45
+INPUT-LIGAND-PDBQT: HETATM   45  O14 UNL     1      20.679   0.833  -0.531  1.00  0.00    -0.292 OA
+INPUT-LIGAND-PDBQT: HETATM   46  H39 UNL     1      20.619   1.227   0.378  1.00  0.00     0.232 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  42  45
+INPUT-LIGAND-PDBQT: ENDBRANCH  33  42
+INPUT-LIGAND-PDBQT: ENDBRANCH  24  27
+INPUT-LIGAND-PDBQT: ENDBRANCH  19  23
+INPUT-LIGAND-PDBQT: ENDBRANCH  14  17
+INPUT-LIGAND-PDBQT: ENDBRANCH   9  13
+INPUT-LIGAND-PDBQT: ENDBRANCH   2   7
+INPUT-LIGAND-PDBQT: BRANCH   3  47
+INPUT-LIGAND-PDBQT: HETATM   47  C12 UNL     1      -2.869  -0.823   0.993  1.00  0.00     0.111 A 
+INPUT-LIGAND-PDBQT: HETATM   48  C13 UNL     1      -4.208  -0.596   0.741  1.00  0.00     0.067 A 
+INPUT-LIGAND-PDBQT: HETATM   49  C14 UNL     1      -4.956  -0.827   1.934  1.00  0.00     0.051 A 
+INPUT-LIGAND-PDBQT: HETATM   50  C15 UNL     1      -4.031  -1.252   2.872  1.00  0.00     0.109 A 
+INPUT-LIGAND-PDBQT: HETATM   51  N6  UNL     1      -2.780  -1.291   2.284  1.00  0.00    -0.346 N 
+INPUT-LIGAND-PDBQT: HETATM   52  C16 UNL     1      -1.640  -1.893   2.945  1.00  0.00     0.157 C 
+INPUT-LIGAND-PDBQT: BRANCH  49  53
+INPUT-LIGAND-PDBQT: HETATM   53  C17 UNL     1      -6.408  -0.653   2.075  1.00  0.00     0.258 C 
+INPUT-LIGAND-PDBQT: HETATM   54  N7  UNL     1      -6.874  -0.797   3.373  1.00  0.00    -0.309 N 
+INPUT-LIGAND-PDBQT: HETATM   55  H34 UNL     1      -6.195  -0.966   4.098  1.00  0.00     0.170 HD
+INPUT-LIGAND-PDBQT: HETATM   56  O3  UNL     1      -7.097  -0.394   1.093  1.00  0.00    -0.267 OA
+INPUT-LIGAND-PDBQT: BRANCH  54  57
+INPUT-LIGAND-PDBQT: HETATM   57  C18 UNL     1      -8.208  -0.684   3.727  1.00  0.00     0.110 A 
+INPUT-LIGAND-PDBQT: HETATM   58  C19 UNL     1      -9.335  -0.450   2.961  1.00  0.00     0.067 A 
+INPUT-LIGAND-PDBQT: HETATM   59  C20 UNL     1     -10.481  -0.424   3.812  1.00  0.00     0.051 A 
+INPUT-LIGAND-PDBQT: HETATM   60  C21 UNL     1      -9.994  -0.653   5.089  1.00  0.00     0.109 A 
+INPUT-LIGAND-PDBQT: HETATM   61  N8  UNL     1      -8.635  -0.807   5.030  1.00  0.00    -0.346 N 
+INPUT-LIGAND-PDBQT: HETATM   62  C22 UNL     1      -7.801  -1.057   6.186  1.00  0.00     0.157 C 
+INPUT-LIGAND-PDBQT: BRANCH  59  63
+INPUT-LIGAND-PDBQT: HETATM   63  C23 UNL     1     -11.903  -0.213   3.506  1.00  0.00     0.257 C 
+INPUT-LIGAND-PDBQT: HETATM   64  N9  UNL     1     -12.159   0.039   2.170  1.00  0.00    -0.323 N 
+INPUT-LIGAND-PDBQT: HETATM   65  H35 UNL     1     -11.358   0.062   1.556  1.00  0.00     0.169 HD
+INPUT-LIGAND-PDBQT: HETATM   66  O4  UNL     1     -12.746  -0.264   4.395  1.00  0.00    -0.267 OA
+INPUT-LIGAND-PDBQT: BRANCH  64  67
+INPUT-LIGAND-PDBQT: HETATM   67  C24 UNL     1     -13.407   0.279   1.557  1.00  0.00     0.035 A 
+INPUT-LIGAND-PDBQT: HETATM   68  C25 UNL     1     -13.404   0.517   0.175  1.00  0.00     0.042 A 
+INPUT-LIGAND-PDBQT: HETATM   69  C26 UNL     1     -14.596   0.766  -0.529  1.00  0.00    -0.022 A 
+INPUT-LIGAND-PDBQT: HETATM   70  C27 UNL     1     -14.593   1.004  -1.913  1.00  0.00     0.039 A 
+INPUT-LIGAND-PDBQT: HETATM   71  C31 UNL     1     -15.820   0.778   0.170  1.00  0.00    -0.024 A 
+INPUT-LIGAND-PDBQT: HETATM   72  C28 UNL     1     -15.789   1.248  -2.606  1.00  0.00     0.096 A 
+INPUT-LIGAND-PDBQT: HETATM   73  C29 UNL     1     -17.001   1.267  -1.909  1.00  0.00     0.096 A 
+INPUT-LIGAND-PDBQT: HETATM   74  C30 UNL     1     -17.013   1.027  -0.527  1.00  0.00     0.039 A 
+INPUT-LIGAND-PDBQT: HETATM   75  C32 UNL     1     -15.818   0.539   1.551  1.00  0.00     0.014 A 
+INPUT-LIGAND-PDBQT: HETATM   76  C33 UNL     1     -14.623   0.292   2.236  1.00  0.00     0.030 A 
+INPUT-LIGAND-PDBQT: BRANCH  72  77
+INPUT-LIGAND-PDBQT: HETATM   77  S2  UNL     1     -15.687   1.586  -4.351  1.00  0.00     0.131 S 
+INPUT-LIGAND-PDBQT: HETATM   78  O8  UNL     1     -14.285   1.618  -4.710  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: HETATM   79  O9  UNL     1     -16.549   2.713  -4.619  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: BRANCH  77  80
+INPUT-LIGAND-PDBQT: HETATM   80  O10 UNL     1     -16.334   0.283  -5.047  1.00  0.00    -0.292 OA
+INPUT-LIGAND-PDBQT: HETATM   81  H38 UNL     1     -17.322   0.368  -5.026  1.00  0.00     0.232 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  77  80
+INPUT-LIGAND-PDBQT: ENDBRANCH  72  77
+INPUT-LIGAND-PDBQT: BRANCH  73  82
+INPUT-LIGAND-PDBQT: HETATM   82  S1  UNL     1     -18.555   1.516  -2.719  1.00  0.00     0.131 S 
+INPUT-LIGAND-PDBQT: HETATM   83  O5  UNL     1     -18.541   0.763  -3.957  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: HETATM   84  O6  UNL     1     -18.878   2.921  -2.656  1.00  0.00    -0.598 OA
+INPUT-LIGAND-PDBQT: BRANCH  82  85
+INPUT-LIGAND-PDBQT: HETATM   85  O7  UNL     1     -19.644   0.791  -1.776  1.00  0.00    -0.292 OA
+INPUT-LIGAND-PDBQT: HETATM   86  H37 UNL     1     -20.448   1.356  -1.762  1.00  0.00     0.232 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  82  85
+INPUT-LIGAND-PDBQT: ENDBRANCH  73  82
+INPUT-LIGAND-PDBQT: ENDBRANCH  64  67
+INPUT-LIGAND-PDBQT: ENDBRANCH  59  63
+INPUT-LIGAND-PDBQT: ENDBRANCH  54  57
+INPUT-LIGAND-PDBQT: ENDBRANCH  49  53
+INPUT-LIGAND-PDBQT: ENDBRANCH   3  47
+INPUT-LIGAND-PDBQT: TORSDOF 18
+________________________________________________________________________________
+
+Total charge on ligand                               =	-4.004 e
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C3_3  and  C35_35 
+REMARK    2  A    between atoms: C5_5  and  N2_47 
+REMARK    3  A    between atoms: C6_6  and  C7_7 
+REMARK       I    between atoms: C6_6  and  N2_47 
+REMARK    4  A    between atoms: C9_9  and  N4_49 
+REMARK       I    between atoms: C11_11  and  N4_49 
+REMARK       I    between atoms: C11_11  and  N5_50 
+REMARK    5  A    between atoms: C12_12  and  N5_50 
+REMARK    6  A    between atoms: C14_14  and  C17_17 
+REMARK       I    between atoms: C17_17  and  N7_52 
+REMARK    7  A    between atoms: C18_18  and  N7_52 
+REMARK    8  A    between atoms: C20_20  and  C23_23 
+REMARK       I    between atoms: C23_23  and  N9_54 
+REMARK    9  A    between atoms: C24_24  and  N9_54 
+REMARK   10  A    between atoms: C28_28  and  S2_74 
+REMARK   11  A    between atoms: C29_29  and  S1_73 
+REMARK       I    between atoms: C35_35  and  N10_55 
+REMARK   12  A    between atoms: C36_36  and  N10_55 
+REMARK   13  A    between atoms: C40_40  and  S4_76 
+REMARK   14  A    between atoms: C41_41  and  S3_75 
+REMARK   15  A    between atoms: O7_62  and  S1_73 
+REMARK   16  A    between atoms: O10_65  and  S2_74 
+REMARK   17  A    between atoms: O14_69  and  S3_75 
+REMARK   18  A    between atoms: O17_72  and  S4_76 
+
+
+Number of Rotatable Bonds in Small Molecule =	18 torsions
+Number of atoms in ligand:  86
+
+Number of non-hydrogen atoms in ligand:  76
+
+Number of vibrational degrees of freedom of ligand:  252
+
+
+Number of torsional degrees of freedom = 18
+Estimated loss of torsional free energy upon binding = +5.3694 kcal/mol
+
+
+DPF> about 0.0 0.0 0.0                           # small molecule center
+
+Small molecule center of rotation =	(+0.000, +0.000, +0.000)
+
+DPF> tran0 random                                 # initial coordinates/random
+
+Initial translation =			(23.984, 4.727, 0.285) Angstroms
+DPF> quaternion0 random                           # initial orientation/random
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( -0.213, -0.276, 0.928, 0.133 ),
+DPF> dihe0 random                                 # initial dihedrals/random
+
+DPF> torsdof 4                                    # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 4
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +1.1932 kcal/mol
+
+DPF> rmstol 2.0                                   # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 50.0                               # external grid energy
+
+External grid energy (beyond grid map walls) = 50.00
+
+DPF> e0max 0.0 10000                             # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 50                             # number of individuals in population
+
+A population of 50 individuals will be used
+DPF> ga_num_evals 500000                        # maximum number of energy evaluations
+
+There will be at most 500000 function evaluations used.
+DPF> ga_num_generations 5000                     # maximum number of generations
+
+The GA will run for at most 5000 generations.
+DPF> ga_elitism 1                                # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                       # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                       # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                           # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                         # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                          # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                                      # set the above parameters for GA or LGA
+
+DPF> sw_max_its 100                              # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 100 iterations.
+DPF> sw_max_succ 4                               # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                               # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                                  # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.1                             # lower bound on rho
+
+rho will never get smaller than 0.100000.
+DPF> ls_search_freq 0.06                         # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> unbound_model bound                         # state of unbound ligand
+
+DPF> ga_run 3                           # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 0.000 0.000 0.000
+Furthest true ligand atom from "about" center is 20.703 Angstroms (maxrad).
+Number of requested GA dockings = 3 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 3
+Run: 1 Seed: 614692740 1635209547 [ Run 1 of 3 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 500000 energy evaluations.
+
+Final-Value: 2217.764
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 7.010 4.412 2.168 quatxyzw -0.287961 0.623457 -0.168080 -0.707198 center 0.000 0.000 0.000 ntor 18 39.7816 -136.5645 141.9254 179.5068 -107.2229 147.1225 140.6536 -180.0000 107.8721 -180.0000 -150.4569 -150.4569 -18.2083 -180.0000 129.3335 163.0846 -98.3900 -139.0092
+State:	  7.010   4.412   2.168  -0.407  0.882 -0.238 -89.985     39.78 -136.56  141.93  179.51 -107.22  147.12  140.65 -180.00  107.87 -180.00 -150.46 -150.46  -18.21 -180.00  129.33  163.08  -98.39 -139.01
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = ligand_212_receptor.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  +2.21e+003 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  +2.21e+003 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +2.21e+003 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  +10.47 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =  +10.47 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_212.pdbqt
+DOCKED: USER    NEWDPF about 0.000000 0.000000 0.000000
+DOCKED: USER    NEWDPF tran0 7.010334 4.411608 2.167520
+DOCKED: USER    NEWDPF quaternion0 -0.287961 0.623457 -0.168080 -0.707198
+DOCKED: USER    NEWDPF axisangle0 -0.407291 0.881815 -0.237732 -89.985212
+DOCKED: USER    NEWDPF quat0 -0.407291 0.881815 -0.237732 -89.985212
+DOCKED: USER    NEWDPF dihe0 39.78 -136.56 141.93 179.51 -107.22 147.12 140.65 -180.00 107.87 -180.00 -150.46 -150.46 -18.21 -180.00 129.33 163.08 -98.39 -139.01 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  18 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C35_35 
+DOCKED: REMARK    2  A    between atoms: C5_5  and  N2_47 
+DOCKED: REMARK    3  A    between atoms: C6_6  and  C7_7 
+DOCKED: REMARK       I    between atoms: C6_6  and  N2_47 
+DOCKED: REMARK    4  A    between atoms: C9_9  and  N4_49 
+DOCKED: REMARK       I    between atoms: C11_11  and  N4_49 
+DOCKED: REMARK       I    between atoms: C11_11  and  N5_50 
+DOCKED: REMARK    5  A    between atoms: C12_12  and  N5_50 
+DOCKED: REMARK    6  A    between atoms: C14_14  and  C17_17 
+DOCKED: REMARK       I    between atoms: C17_17  and  N7_52 
+DOCKED: REMARK    7  A    between atoms: C18_18  and  N7_52 
+DOCKED: REMARK    8  A    between atoms: C20_20  and  C23_23 
+DOCKED: REMARK       I    between atoms: C23_23  and  N9_54 
+DOCKED: REMARK    9  A    between atoms: C24_24  and  N9_54 
+DOCKED: REMARK   10  A    between atoms: C28_28  and  S2_74 
+DOCKED: REMARK   11  A    between atoms: C29_29  and  S1_73 
+DOCKED: REMARK       I    between atoms: C35_35  and  N10_55 
+DOCKED: REMARK   12  A    between atoms: C36_36  and  N10_55 
+DOCKED: REMARK   13  A    between atoms: C40_40  and  S4_76 
+DOCKED: REMARK   14  A    between atoms: C41_41  and  S3_75 
+DOCKED: REMARK   15  A    between atoms: O7_62  and  S1_73 
+DOCKED: REMARK   16  A    between atoms: O10_65  and  S2_74 
+DOCKED: REMARK   17  A    between atoms: O14_69  and  S3_75 
+DOCKED: REMARK   18  A    between atoms: O17_72  and  S4_76 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C11 UNL     1       7.343   4.564   2.808 -0.05 +0.00    +0.327 C 
+DOCKED: ATOM      2  N4  UNL     1       6.345   3.860   2.146 -0.02 -0.00    -0.294 N 
+DOCKED: ATOM      3  N5  UNL     1       6.854   5.016   4.027 -0.08 -0.00    -0.294 N 
+DOCKED: ATOM      4  O2  UNL     1       8.475   4.756   2.385 -0.10 -0.00    -0.247 OA
+DOCKED: ATOM      5  H32 UNL     1       5.707   3.370   2.759 +0.07 +0.00    +0.172 HD
+DOCKED: ATOM      6  H33 UNL     1       5.865   5.232   4.023 +0.08 +0.00    +0.172 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   2   7
+DOCKED: ATOM      7  C9  UNL     1       6.461   3.343   0.865 -0.06 +0.00    +0.111 A 
+DOCKED: ATOM      8  C10 UNL     1       7.488   2.527   0.429 -0.10 +0.00    +0.067 A 
+DOCKED: ATOM      9  C7  UNL     1       7.297   2.233  -0.952 -0.07 +0.00    +0.051 A 
+DOCKED: ATOM     10  C8  UNL     1       6.100   2.838  -1.296 -0.06 +0.00    +0.109 A 
+DOCKED: ATOM     11  N3  UNL     1       5.580   3.471  -0.184 -0.02 -0.00    -0.346 N 
+DOCKED: ATOM     12  C34 UNL     1       4.239   4.019  -0.171 -0.15 +0.00    +0.157 C 
+DOCKED: BRANCH   9  13
+DOCKED: ATOM     13  C6  UNL     1       8.188   1.424  -1.792 -0.06 +0.00    +0.258 C 
+DOCKED: ATOM     14  N2  UNL     1       9.532   1.632  -1.542 -0.06 -0.00    -0.309 N 
+DOCKED: ATOM     15  H31 UNL     1       9.753   2.101  -0.672 +0.07 +0.00    +0.170 HD
+DOCKED: ATOM     16  O1  UNL     1       7.720   0.621  -2.590 -0.16 -0.00    -0.267 OA
+DOCKED: BRANCH  14  17
+DOCKED: ATOM     17  C5  UNL     1      10.597   1.014  -2.176 -0.25 +0.00    +0.110 A 
+DOCKED: ATOM     18  C4  UNL     1      11.922   1.204  -1.834 +0.28 +0.00    +0.067 A 
+DOCKED: ATOM     19  C3  UNL     1      12.746   0.371  -2.645 +0.55 +0.00    +0.051 A 
+DOCKED: ATOM     20  C2  UNL     1      11.877  -0.267  -3.513 +1.09 +0.00    +0.109 A 
+DOCKED: ATOM     21  N1  UNL     1      10.587   0.162  -3.258 -0.14 -0.00    -0.346 N 
+DOCKED: ATOM     22  C1  UNL     1       9.490  -0.159  -4.148 +1.12 +0.00    +0.157 C 
+DOCKED: BRANCH  19  23
+DOCKED: ATOM     23  C35 UNL     1      14.208   0.264  -2.551+53.75 +0.00    +0.257 C 
+DOCKED: ATOM     24  N10 UNL     1      14.731   0.663  -1.334 +5.76 -0.00    -0.323 N 
+DOCKED: ATOM     25  H36 UNL     1      14.071   1.028  -0.664 -0.38 +0.00    +0.169 HD
+DOCKED: ATOM     26  O11 UNL     1      14.858  -0.140  -3.509+44.26 -0.00    -0.267 OA
+DOCKED: BRANCH  24  27
+DOCKED: ATOM     27  C36 UNL     1      16.082   0.664  -0.930 +4.62 +0.00    +0.035 A 
+DOCKED: ATOM     28  C37 UNL     1      16.865   1.815  -0.813+31.36 +0.00    +0.042 A 
+DOCKED: ATOM     29  C38 UNL     1      18.211   1.744  -0.405+99.99 -0.00    -0.022 A 
+DOCKED: ATOM     30  C39 UNL     1      18.998   2.901  -0.286+94.59 +0.00    +0.039 A 
+DOCKED: ATOM     31  C43 UNL     1      18.782   0.489  -0.110+99.99 -0.00    -0.024 A 
+DOCKED: ATOM     32  C40 UNL     1      20.337   2.823   0.124+99.99 +0.00    +0.096 A 
+DOCKED: ATOM     33  C41 UNL     1      20.905   1.578   0.409+99.99 +0.00    +0.096 A 
+DOCKED: ATOM     34  C42 UNL     1      20.123   0.417   0.297+99.99 +0.00    +0.039 A 
+DOCKED: ATOM     35  C44 UNL     1      17.993  -0.663  -0.229+35.23 +0.00    +0.014 A 
+DOCKED: ATOM     36  C45 UNL     1      16.659  -0.574  -0.634 +8.82 +0.00    +0.030 A 
+DOCKED: BRANCH  32  37
+DOCKED: ATOM     37  S4  UNL     1      21.269   4.327   0.195+99.99 +0.00    +0.131 S 
+DOCKED: ATOM     38  O15 UNL     1      20.595   5.315  -0.611+64.81 -0.00    -0.598 OA
+DOCKED: ATOM     39  O16 UNL     1      21.646   4.553   1.577+99.99 -0.00    -0.598 OA
+DOCKED: BRANCH  37  40
+DOCKED: ATOM     40  O17 UNL     1      22.641   4.010  -0.589+99.99 -0.00    -0.292 OA
+DOCKED: ATOM     41  H40 UNL     1      23.154   4.846  -0.642 +0.27 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  37  40
+DOCKED: ENDBRANCH  32  37
+DOCKED: BRANCH  33  42
+DOCKED: ATOM     42  S3  UNL     1      22.583   1.400   0.977+99.99 +0.00    +0.131 S 
+DOCKED: ATOM     43  O12 UNL     1      23.393   2.362   0.262+10.67 -0.00    -0.598 OA
+DOCKED: ATOM     44  O13 UNL     1      22.897  -0.009   0.945+46.54 -0.00    -0.598 OA
+DOCKED: BRANCH  42  45
+DOCKED: ATOM     45  O14 UNL     1      22.531   1.866   2.521 +2.00 -0.00    -0.292 OA
+DOCKED: ATOM     46  H39 UNL     1      22.150   2.781   2.566 +0.13 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  42  45
+DOCKED: ENDBRANCH  33  42
+DOCKED: ENDBRANCH  24  27
+DOCKED: ENDBRANCH  19  23
+DOCKED: ENDBRANCH  14  17
+DOCKED: ENDBRANCH   9  13
+DOCKED: ENDBRANCH   2   7
+DOCKED: BRANCH   3  47
+DOCKED: ATOM     47  C12 UNL     1       7.605   5.680   4.984 -0.11 +0.00    +0.111 A 
+DOCKED: ATOM     48  C13 UNL     1       8.872   6.192   4.782 -0.07 +0.00    +0.067 A 
+DOCKED: ATOM     49  C14 UNL     1       9.347   6.764   6.000 +5.48 +0.00    +0.051 A 
+DOCKED: ATOM     50  C15 UNL     1       8.305   6.629   6.901+24.28 +0.00    +0.109 A 
+DOCKED: ATOM     51  N6  UNL     1       7.240   6.015   6.268 +0.61 -0.00    -0.346 N 
+DOCKED: ATOM     52  C16 UNL     1       5.932   5.921   6.883 -0.32 +0.00    +0.157 C 
+DOCKED: BRANCH  49  53
+DOCKED: ATOM     53  C17 UNL     1      10.669   7.375   6.194 -0.10 +0.00    +0.258 C 
+DOCKED: ATOM     54  N7  UNL     1      11.550   7.170   5.144 -0.15 -0.00    -0.309 N 
+DOCKED: ATOM     55  H34 UNL     1      11.210   6.667   4.339 +0.11 +0.00    +0.170 HD
+DOCKED: ATOM     56  O3  UNL     1      10.911   8.010   7.217 +1.57 -0.00    -0.267 OA
+DOCKED: BRANCH  54  57
+DOCKED: ATOM     57  C18 UNL     1      12.849   7.649   5.126 -0.33 +0.00    +0.110 A 
+DOCKED: ATOM     58  C19 UNL     1      13.837   7.561   4.163 -0.43 +0.00    +0.067 A 
+DOCKED: ATOM     59  C20 UNL     1      15.010   8.225   4.634 -0.34 +0.00    +0.051 A 
+DOCKED: ATOM     60  C21 UNL     1      14.678   8.705   5.891+14.48 +0.00    +0.109 A 
+DOCKED: ATOM     61  N8  UNL     1      13.385   8.356   6.178 -0.13 -0.00    -0.346 N 
+DOCKED: ATOM     62  C22 UNL     1      12.715   8.694   7.415 -0.43 +0.00    +0.157 C 
+DOCKED: BRANCH  59  63
+DOCKED: ATOM     63  C23 UNL     1      16.325   8.418   4.008 -0.38 +0.00    +0.257 C 
+DOCKED: ATOM     64  N9  UNL     1      17.363   8.556   4.911 +0.56 -0.00    -0.323 N 
+DOCKED: ATOM     65  H35 UNL     1      17.115   8.521   5.889 +2.09 +0.00    +0.169 HD
+DOCKED: ATOM     66  O4  UNL     1      16.435   8.449   2.787 -0.39 -0.00    -0.267 OA
+DOCKED: BRANCH  64  67
+DOCKED: ATOM     67  C24 UNL     1      18.733   8.751   4.634 +1.30 +0.00    +0.035 A 
+DOCKED: ATOM     68  C25 UNL     1      19.109   8.808   3.285 -0.36 +0.00    +0.042 A 
+DOCKED: ATOM     69  C26 UNL     1      20.450   9.000   2.905 -0.11 -0.00    -0.022 A 
+DOCKED: ATOM     70  C27 UNL     1      20.827   9.058   1.553 +3.51 +0.00    +0.039 A 
+DOCKED: ATOM     71  C31 UNL     1      21.437   9.135   3.902 +0.91 -0.00    -0.024 A 
+DOCKED: ATOM     72  C28 UNL     1      22.168   9.252   1.185 -0.33 +0.00    +0.096 A 
+DOCKED: ATOM     73  C29 UNL     1      23.146   9.379   2.177 -0.37 +0.00    +0.096 A 
+DOCKED: ATOM     74  C30 UNL     1      22.777   9.325   3.529 -0.45 +0.00    +0.039 A 
+DOCKED: ATOM     75  C32 UNL     1      21.056   9.077   5.250+30.91 +0.00    +0.014 A 
+DOCKED: ATOM     76  C33 UNL     1      19.717   8.887   5.610+39.11 +0.00    +0.030 A 
+DOCKED: BRANCH  72  77
+DOCKED: ATOM     77  S2  UNL     1      22.562   9.266  -0.551 -0.15 +0.00    +0.131 S 
+DOCKED: ATOM     78  O8  UNL     1      23.493  10.351  -0.780 +1.76 -0.00    -0.598 OA
+DOCKED: ATOM     79  O9  UNL     1      21.314   9.192  -1.273 +7.22 -0.00    -0.598 OA
+DOCKED: BRANCH  77  80
+DOCKED: ATOM     80  O10 UNL     1      23.361   7.886  -0.788 -0.35 -0.00    -0.292 OA
+DOCKED: ATOM     81  H38 UNL     1      24.143   8.066  -1.371 +0.17 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  77  80
+DOCKED: ENDBRANCH  72  77
+DOCKED: BRANCH  73  82
+DOCKED: ATOM     82  S1  UNL     1      24.848   9.678   1.794 -0.54 +0.00    +0.131 S 
+DOCKED: ATOM     83  O5  UNL     1      25.656   8.863   2.679 -0.17 -0.00    -0.598 OA
+DOCKED: ATOM     84  O6  UNL     1      25.035  11.101   1.645 +0.61 -0.00    -0.598 OA
+DOCKED: BRANCH  82  85
+DOCKED: ATOM     85  O7  UNL     1      25.062   9.068   0.317 +0.35 -0.00    -0.292 OA
+DOCKED: ATOM     86  H37 UNL     1      24.556   8.227   0.266 +0.18 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  82  85
+DOCKED: ENDBRANCH  73  82
+DOCKED: ENDBRANCH  64  67
+DOCKED: ENDBRANCH  59  63
+DOCKED: ENDBRANCH  54  57
+DOCKED: ENDBRANCH  49  53
+DOCKED: ENDBRANCH   3  47
+DOCKED: TORSDOF 18
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 3
+Run: 2 Seed: 1546964472 799910426 [ Run 2 of 3 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 500000 energy evaluations.
+
+Final-Value: 6217.105
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 21.193 10.794 -0.770 quatxyzw -0.443542 0.063230 0.329658 0.831022 center 0.000 0.000 0.000 ntor 18 93.3173 -180.0000 170.7716 -29.3961 18.1642 -120.8377 145.3441 -180.0000 180.0000 20.6461 154.0378 -13.4436 163.7960 -18.1374 -70.5232 -72.9735 -137.2651 179.1454
+State:	 21.193  10.794  -0.770  -0.797  0.114  0.593 67.592     93.32 -180.00  170.77  -29.40   18.16 -120.84  145.34 -180.00  180.00   20.65  154.04  -13.44  163.80  -18.14  -70.52  -72.97 -137.27  179.15
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = ligand_212_receptor.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  +6.22e+003 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  +6.22e+003 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +6.22e+003 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -3.02 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -3.02 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_212.pdbqt
+DOCKED: USER    NEWDPF about 0.000000 0.000000 0.000000
+DOCKED: USER    NEWDPF tran0 21.192629 10.793522 -0.769712
+DOCKED: USER    NEWDPF quaternion0 -0.443542 0.063230 0.329658 0.831022
+DOCKED: USER    NEWDPF axisangle0 -0.797395 0.113675 0.592655 67.592266
+DOCKED: USER    NEWDPF quat0 -0.797395 0.113675 0.592655 67.592266
+DOCKED: USER    NEWDPF dihe0 93.32 -180.00 170.77 -29.40 18.16 -120.84 145.34 -180.00 180.00 20.65 154.04 -13.44 163.80 -18.14 -70.52 -72.97 -137.27 179.15 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  18 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C35_35 
+DOCKED: REMARK    2  A    between atoms: C5_5  and  N2_47 
+DOCKED: REMARK    3  A    between atoms: C6_6  and  C7_7 
+DOCKED: REMARK       I    between atoms: C6_6  and  N2_47 
+DOCKED: REMARK    4  A    between atoms: C9_9  and  N4_49 
+DOCKED: REMARK       I    between atoms: C11_11  and  N4_49 
+DOCKED: REMARK       I    between atoms: C11_11  and  N5_50 
+DOCKED: REMARK    5  A    between atoms: C12_12  and  N5_50 
+DOCKED: REMARK    6  A    between atoms: C14_14  and  C17_17 
+DOCKED: REMARK       I    between atoms: C17_17  and  N7_52 
+DOCKED: REMARK    7  A    between atoms: C18_18  and  N7_52 
+DOCKED: REMARK    8  A    between atoms: C20_20  and  C23_23 
+DOCKED: REMARK       I    between atoms: C23_23  and  N9_54 
+DOCKED: REMARK    9  A    between atoms: C24_24  and  N9_54 
+DOCKED: REMARK   10  A    between atoms: C28_28  and  S2_74 
+DOCKED: REMARK   11  A    between atoms: C29_29  and  S1_73 
+DOCKED: REMARK       I    between atoms: C35_35  and  N10_55 
+DOCKED: REMARK   12  A    between atoms: C36_36  and  N10_55 
+DOCKED: REMARK   13  A    between atoms: C40_40  and  S4_76 
+DOCKED: REMARK   14  A    between atoms: C41_41  and  S3_75 
+DOCKED: REMARK   15  A    between atoms: O7_62  and  S1_73 
+DOCKED: REMARK   16  A    between atoms: O10_65  and  S2_74 
+DOCKED: REMARK   17  A    between atoms: O14_69  and  S3_75 
+DOCKED: REMARK   18  A    between atoms: O17_72  and  S4_76 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C11 UNL     1      20.463  10.723  -0.681 +7.58 +0.00    +0.327 C 
+DOCKED: ATOM      2  N4  UNL     1      21.513  11.050  -1.530+99.99 -0.00    -0.294 N 
+DOCKED: ATOM      3  N5  UNL     1      19.410  11.603  -0.893 +0.43 -0.00    -0.294 N 
+DOCKED: ATOM      4  O2  UNL     1      20.466   9.804   0.127 -0.26 -0.00    -0.247 OA
+DOCKED: ATOM      5  H32 UNL     1      21.222  11.440  -2.417+99.99 +0.00    +0.172 HD
+DOCKED: ATOM      6  H33 UNL     1      19.696  12.534  -1.167 +0.20 +0.00    +0.172 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   2   7
+DOCKED: ATOM      7  C9  UNL     1      22.754  10.433  -1.526+22.05 +0.00    +0.111 A 
+DOCKED: ATOM      8  C10 UNL     1      23.049   9.249  -0.878 +0.53 +0.00    +0.067 A 
+DOCKED: ATOM      9  C7  UNL     1      24.431   8.949  -1.056 +3.81 +0.00    +0.051 A 
+DOCKED: ATOM     10  C8  UNL     1      24.922   9.949  -1.879+99.99 +0.00    +0.109 A 
+DOCKED: ATOM     11  N3  UNL     1      23.895  10.817  -2.193 +8.20 -0.00    -0.346 N 
+DOCKED: ATOM     12  C34 UNL     1      24.044  11.849  -3.199+99.99 +0.00    +0.157 C 
+DOCKED: BRANCH   9  13
+DOCKED: ATOM     13  C6  UNL     1      25.140   7.794  -0.495 -0.18 +0.00    +0.258 C 
+DOCKED: ATOM     14  N2  UNL     1      25.721   6.979  -1.448 -0.16 -0.00    -0.309 N 
+DOCKED: ATOM     15  H31 UNL     1      25.819   7.379  -2.372 +0.14 +0.00    +0.170 HD
+DOCKED: ATOM     16  O1  UNL     1      25.214   7.648   0.720 -0.24 -0.00    -0.267 OA
+DOCKED: BRANCH  14  17
+DOCKED: ATOM     17  C5  UNL     1      26.450   5.824  -1.216 -0.30 +0.00    +0.110 A 
+DOCKED: ATOM     18  C4  UNL     1      26.611   5.243   0.028 -0.32 +0.00    +0.067 A 
+DOCKED: ATOM     19  C3  UNL     1      27.362   4.039  -0.105 -0.22 +0.00    +0.051 A 
+DOCKED: ATOM     20  C2  UNL     1      27.691   3.960  -1.446 -0.22 +0.00    +0.109 A 
+DOCKED: ATOM     21  N1  UNL     1      27.180   5.064  -2.103 -0.06 -0.00    -0.346 N 
+DOCKED: ATOM     22  C1  UNL     1      27.549   5.373  -3.470+66.77 +0.00    +0.157 C 
+DOCKED: BRANCH  19  23
+DOCKED: ATOM     23  C35 UNL     1      27.704   3.122   0.991+24.17 +0.00    +0.257 C 
+DOCKED: ATOM     24  N10 UNL     1      27.930   3.744   2.206+99.99 -0.00    -0.323 N 
+DOCKED: ATOM     25  H36 UNL     1      27.887   4.752   2.204+97.48 +0.00    +0.169 HD
+DOCKED: ATOM     26  O11 UNL     1      27.780   1.916   0.782+12.45 -0.00    -0.267 OA
+DOCKED: BRANCH  24  27
+DOCKED: ATOM     27  C36 UNL     1      28.258   3.145   3.439+99.99 +0.00    +0.035 A 
+DOCKED: ATOM     28  C37 UNL     1      28.512   3.856   4.614+99.99 +0.00    +0.042 A 
+DOCKED: ATOM     29  C38 UNL     1      28.836   3.192   5.813+41.33 -0.00    -0.022 A 
+DOCKED: ATOM     30  C39 UNL     1      29.089   3.907   6.995+36.80 +0.00    +0.039 A 
+DOCKED: ATOM     31  C43 UNL     1      28.910   1.784   5.830 +1.83 -0.00    -0.024 A 
+DOCKED: ATOM     32  C40 UNL     1      29.408   3.239   8.187+99.99 +0.00    +0.096 A 
+DOCKED: ATOM     33  C41 UNL     1      29.489   1.844   8.201+99.99 +0.00    +0.096 A 
+DOCKED: ATOM     34  C42 UNL     1      29.233   1.122   7.024+61.92 +0.00    +0.039 A 
+DOCKED: ATOM     35  C44 UNL     1      28.656   1.075   4.649+53.66 +0.00    +0.014 A 
+DOCKED: ATOM     36  C45 UNL     1      28.334   1.749   3.468+70.88 +0.00    +0.030 A 
+DOCKED: BRANCH  32  37
+DOCKED: ATOM     37  S4  UNL     1      29.764   4.222   9.616+99.99 +0.00    +0.131 S 
+DOCKED: ATOM     38  O15 UNL     1      28.642   4.131  10.518+79.11 -0.00    -0.598 OA
+DOCKED: ATOM     39  O16 UNL     1      31.129   3.946  10.019 +2.37 -0.00    -0.598 OA
+DOCKED: BRANCH  37  40
+DOCKED: ATOM     40  O17 UNL     1      29.759   5.746   9.092+13.06 -0.00    -0.292 OA
+DOCKED: ATOM     41  H40 UNL     1      30.574   6.180   9.429 +0.62 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  37  40
+DOCKED: ENDBRANCH  32  37
+DOCKED: BRANCH  33  42
+DOCKED: ATOM     42  S3  UNL     1      29.845   0.922   9.682+96.19 +0.00    +0.131 S 
+DOCKED: ATOM     43  O12 UNL     1      28.898   1.335  10.695+99.99 -0.00    -0.598 OA
+DOCKED: ATOM     44  O13 UNL     1      31.267   1.014   9.911+99.99 -0.00    -0.598 OA
+DOCKED: BRANCH  42  45
+DOCKED: ATOM     45  O14 UNL     1      29.499  -0.605   9.292+99.99 -0.00    -0.292 OA
+DOCKED: ATOM     46  H39 UNL     1      28.595  -0.826   9.638 +0.17 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  42  45
+DOCKED: ENDBRANCH  33  42
+DOCKED: ENDBRANCH  24  27
+DOCKED: ENDBRANCH  19  23
+DOCKED: ENDBRANCH  14  17
+DOCKED: ENDBRANCH   9  13
+DOCKED: ENDBRANCH   2   7
+DOCKED: BRANCH   3  47
+DOCKED: ATOM     47  C12 UNL     1      18.171  11.515  -0.279 +1.99 +0.00    +0.111 A 
+DOCKED: ATOM     48  C13 UNL     1      17.570  10.341   0.132 -0.39 +0.00    +0.067 A 
+DOCKED: ATOM     49  C14 UNL     1      16.286  10.637   0.680 -0.40 +0.00    +0.051 A 
+DOCKED: ATOM     50  C15 UNL     1      16.175  12.016   0.634 -0.03 +0.00    +0.109 A 
+DOCKED: ATOM     51  N6  UNL     1      17.335  12.543   0.096 +4.76 -0.00    -0.346 N 
+DOCKED: ATOM     52  C16 UNL     1      17.610  13.965   0.109+99.99 +0.00    +0.157 C 
+DOCKED: BRANCH  49  53
+DOCKED: ATOM     53  C17 UNL     1      15.330   9.645   1.190 +9.94 +0.00    +0.258 C 
+DOCKED: ATOM     54  N7  UNL     1      15.101   9.727   2.555 +0.17 -0.00    -0.309 N 
+DOCKED: ATOM     55  H34 UNL     1      15.565  10.461   3.064 +0.08 +0.00    +0.170 HD
+DOCKED: ATOM     56  O3  UNL     1      14.803   8.845   0.423+13.30 -0.00    -0.267 OA
+DOCKED: BRANCH  54  57
+DOCKED: ATOM     57  C18 UNL     1      14.245   8.882   3.242 +0.19 +0.00    +0.110 A 
+DOCKED: ATOM     58  C19 UNL     1      13.245   8.040   2.792 +1.02 +0.00    +0.067 A 
+DOCKED: ATOM     59  C20 UNL     1      12.652   7.380   3.911 -0.40 +0.00    +0.051 A 
+DOCKED: ATOM     60  C21 UNL     1      13.335   7.854   5.020 -0.35 +0.00    +0.109 A 
+DOCKED: ATOM     61  N8  UNL     1      14.285   8.752   4.611 -0.11 -0.00    -0.346 N 
+DOCKED: ATOM     62  C22 UNL     1      15.179   9.445   5.514+13.59 +0.00    +0.157 C 
+DOCKED: BRANCH  59  63
+DOCKED: ATOM     63  C23 UNL     1      11.561   6.398   3.982 -0.22 +0.00    +0.257 C 
+DOCKED: ATOM     64  N9  UNL     1      10.804   6.313   2.827 -0.14 -0.00    -0.323 N 
+DOCKED: ATOM     65  H35 UNL     1      11.068   6.929   2.072 +0.09 +0.00    +0.169 HD
+DOCKED: ATOM     66  O4  UNL     1      11.380   5.741   5.001 -0.19 -0.00    -0.267 OA
+DOCKED: BRANCH  64  67
+DOCKED: ATOM     67  C24 UNL     1       9.698   5.475   2.575 -0.18 +0.00    +0.035 A 
+DOCKED: ATOM     68  C25 UNL     1       9.368   5.240   1.232 -0.14 +0.00    +0.042 A 
+DOCKED: ATOM     69  C26 UNL     1       8.283   4.418   0.877 -0.12 -0.00    -0.022 A 
+DOCKED: ATOM     70  C27 UNL     1       7.953   4.182  -0.468 -0.10 +0.00    +0.039 A 
+DOCKED: ATOM     71  C31 UNL     1       7.510   3.819   1.892 -0.13 -0.00    -0.024 A 
+DOCKED: ATOM     72  C28 UNL     1       6.870   3.358  -0.811 -0.06 +0.00    +0.096 A 
+DOCKED: ATOM     73  C29 UNL     1       6.100   2.771   0.198 -0.07 +0.00    +0.096 A 
+DOCKED: ATOM     74  C30 UNL     1       6.426   2.998   1.543 -0.11 +0.00    +0.039 A 
+DOCKED: ATOM     75  C32 UNL     1       7.844   4.056   3.232 -0.21 +0.00    +0.014 A 
+DOCKED: ATOM     76  C33 UNL     1       8.928   4.876   3.569 -0.21 +0.00    +0.030 A 
+DOCKED: BRANCH  72  77
+DOCKED: ATOM     77  S2  UNL     1       6.495   3.152  -2.539 -0.16 +0.00    +0.131 S 
+DOCKED: ATOM     78  O8  UNL     1       6.099   1.774  -2.741 +0.03 -0.00    -0.598 OA
+DOCKED: ATOM     79  O9  UNL     1       7.589   3.727  -3.286 -0.04 -0.00    -0.598 OA
+DOCKED: BRANCH  77  80
+DOCKED: ATOM     80  O10 UNL     1       5.190   4.069  -2.775 +0.05 -0.00    -0.292 OA
+DOCKED: ATOM     81  H38 UNL     1       4.404   3.478  -2.905 +0.02 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  77  80
+DOCKED: ENDBRANCH  72  77
+DOCKED: BRANCH  73  82
+DOCKED: ATOM     82  S1  UNL     1       4.753   1.678  -0.154 -0.17 +0.00    +0.131 S 
+DOCKED: ATOM     83  O5  UNL     1       3.670   1.996   0.754 +0.01 -0.00    -0.598 OA
+DOCKED: ATOM     84  O6  UNL     1       5.281   0.345  -0.315 +0.23 -0.00    -0.598 OA
+DOCKED: BRANCH  82  85
+DOCKED: ATOM     85  O7  UNL     1       4.235   2.105  -1.621 -0.04 -0.00    -0.292 OA
+DOCKED: ATOM     86  H37 UNL     1       4.454   1.372  -2.238 +0.05 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  82  85
+DOCKED: ENDBRANCH  73  82
+DOCKED: ENDBRANCH  64  67
+DOCKED: ENDBRANCH  59  63
+DOCKED: ENDBRANCH  54  57
+DOCKED: ENDBRANCH  49  53
+DOCKED: ENDBRANCH   3  47
+DOCKED: TORSDOF 18
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 3
+Run: 3 Seed: 656608623 1298202333 [ Run 3 of 3 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 500000 energy evaluations.
+
+Final-Value: 2690.096
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 16.009 11.650 7.907 quatxyzw 0.154433 -0.711149 0.681915 0.073556 center 0.000 0.000 0.000 ntor 18 -59.5784 -64.6593 25.8514 -51.3114 177.3727 21.0903 130.5979 -179.5051 137.2856 142.7592 180.0000 -68.9577 8.3115 78.0644 40.9107 151.8164 -102.9029 -44.0869
+State:	 16.009  11.650   7.907   0.155 -0.713  0.684 171.563    -59.58  -64.66   25.85  -51.31  177.37   21.09  130.60 -179.51  137.29  142.76  180.00  -68.96    8.31   78.06   40.91  151.82 -102.90  -44.09
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = ligand_212_receptor.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  +2.70e+003 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  +2.69e+003 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +2.69e+003 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -4.68 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -4.68 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_212.pdbqt
+DOCKED: USER    NEWDPF about 0.000000 0.000000 0.000000
+DOCKED: USER    NEWDPF tran0 16.009401 11.649917 7.907076
+DOCKED: USER    NEWDPF quaternion0 0.154433 -0.711149 0.681915 0.073556
+DOCKED: USER    NEWDPF axisangle0 0.154853 -0.713080 0.683767 171.563494
+DOCKED: USER    NEWDPF quat0 0.154853 -0.713080 0.683767 171.563494
+DOCKED: USER    NEWDPF dihe0 -59.58 -64.66 25.85 -51.31 177.37 21.09 130.60 -179.51 137.29 142.76 180.00 -68.96 8.31 78.06 40.91 151.82 -102.90 -44.09 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  18 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C3_3  and  C35_35 
+DOCKED: REMARK    2  A    between atoms: C5_5  and  N2_47 
+DOCKED: REMARK    3  A    between atoms: C6_6  and  C7_7 
+DOCKED: REMARK       I    between atoms: C6_6  and  N2_47 
+DOCKED: REMARK    4  A    between atoms: C9_9  and  N4_49 
+DOCKED: REMARK       I    between atoms: C11_11  and  N4_49 
+DOCKED: REMARK       I    between atoms: C11_11  and  N5_50 
+DOCKED: REMARK    5  A    between atoms: C12_12  and  N5_50 
+DOCKED: REMARK    6  A    between atoms: C14_14  and  C17_17 
+DOCKED: REMARK       I    between atoms: C17_17  and  N7_52 
+DOCKED: REMARK    7  A    between atoms: C18_18  and  N7_52 
+DOCKED: REMARK    8  A    between atoms: C20_20  and  C23_23 
+DOCKED: REMARK       I    between atoms: C23_23  and  N9_54 
+DOCKED: REMARK    9  A    between atoms: C24_24  and  N9_54 
+DOCKED: REMARK   10  A    between atoms: C28_28  and  S2_74 
+DOCKED: REMARK   11  A    between atoms: C29_29  and  S1_73 
+DOCKED: REMARK       I    between atoms: C35_35  and  N10_55 
+DOCKED: REMARK   12  A    between atoms: C36_36  and  N10_55 
+DOCKED: REMARK   13  A    between atoms: C40_40  and  S4_76 
+DOCKED: REMARK   14  A    between atoms: C41_41  and  S3_75 
+DOCKED: REMARK   15  A    between atoms: O7_62  and  S1_73 
+DOCKED: REMARK   16  A    between atoms: O10_65  and  S2_74 
+DOCKED: REMARK   17  A    between atoms: O14_69  and  S3_75 
+DOCKED: REMARK   18  A    between atoms: O17_72  and  S4_76 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C11 UNL     1      16.678  11.444   8.141+83.56 +0.00    +0.327 C 
+DOCKED: ATOM      2  N4  UNL     1      15.587  12.288   8.310+11.46 -0.00    -0.294 N 
+DOCKED: ATOM      3  N5  UNL     1      17.850  12.158   8.360+36.32 -0.00    -0.294 N 
+DOCKED: ATOM      4  O2  UNL     1      16.617  10.257   7.847+99.99 -0.00    -0.247 OA
+DOCKED: ATOM      5  H32 UNL     1      15.730  13.018   8.996+63.62 +0.00    +0.172 HD
+DOCKED: ATOM      6  H33 UNL     1      17.795  13.133   8.096 +0.56 +0.00    +0.172 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   2   7
+DOCKED: ATOM      7  C9  UNL     1      14.268  11.928   8.083 +0.17 +0.00    +0.111 A 
+DOCKED: ATOM      8  C10 UNL     1      13.668  10.776   8.555 +0.23 +0.00    +0.067 A 
+DOCKED: ATOM      9  C7  UNL     1      12.324  10.723   8.085 +2.64 +0.00    +0.051 A 
+DOCKED: ATOM     10  C8  UNL     1      12.130  11.902   7.386+99.99 +0.00    +0.109 A 
+DOCKED: ATOM     11  N3  UNL     1      13.295  12.644   7.425 +4.22 -0.00    -0.346 N 
+DOCKED: ATOM     12  C34 UNL     1      13.346  14.015   6.960+99.99 +0.00    +0.157 C 
+DOCKED: BRANCH   9  13
+DOCKED: ATOM     13  C6  UNL     1      11.365   9.641   8.340 +3.94 +0.00    +0.258 C 
+DOCKED: ATOM     14  N2  UNL     1      10.774   9.137   7.197 +0.62 -0.00    -0.309 N 
+DOCKED: ATOM     15  H31 UNL     1      11.230   9.371   6.324 +0.25 +0.00    +0.170 HD
+DOCKED: ATOM     16  O1  UNL     1      11.186   9.236   9.483+99.99 -0.00    -0.267 OA
+DOCKED: BRANCH  14  17
+DOCKED: ATOM     17  C5  UNL     1       9.837   8.120   7.130+26.10 +0.00    +0.110 A 
+DOCKED: ATOM     18  C4  UNL     1       9.706   7.252   6.062 +8.00 +0.00    +0.067 A 
+DOCKED: ATOM     19  C3  UNL     1       8.690   6.295   6.350 +3.68 +0.00    +0.051 A 
+DOCKED: ATOM     20  C2  UNL     1       8.185   6.660   7.585 +9.86 +0.00    +0.109 A 
+DOCKED: ATOM     21  N1  UNL     1       8.846   7.791   8.029+76.22 -0.00    -0.346 N 
+DOCKED: ATOM     22  C1  UNL     1       8.388   8.535   9.183+99.99 +0.00    +0.157 C 
+DOCKED: BRANCH  19  23
+DOCKED: ATOM     23  C35 UNL     1       8.289   5.186   5.473 -0.19 +0.00    +0.257 C 
+DOCKED: ATOM     24  N10 UNL     1       8.864   5.217   4.216 -0.07 -0.00    -0.323 N 
+DOCKED: ATOM     25  H36 UNL     1       9.452   6.013   4.015 +0.10 +0.00    +0.169 HD
+DOCKED: ATOM     26  O11 UNL     1       7.498   4.340   5.875 -0.23 -0.00    -0.267 OA
+DOCKED: BRANCH  24  27
+DOCKED: ATOM     27  C36 UNL     1       8.696   4.295   3.162 -0.20 +0.00    +0.035 A 
+DOCKED: ATOM     28  C37 UNL     1       8.479   4.656   1.830 -0.13 +0.00    +0.042 A 
+DOCKED: ATOM     29  C38 UNL     1       8.316   3.682   0.827 -0.12 -0.00    -0.022 A 
+DOCKED: ATOM     30  C39 UNL     1       8.101   4.045  -0.512 -0.10 +0.00    +0.039 A 
+DOCKED: ATOM     31  C43 UNL     1       8.370   2.315   1.171 -0.21 -0.00    -0.024 A 
+DOCKED: ATOM     32  C40 UNL     1       7.943   3.069  -1.507 -0.07 +0.00    +0.096 A 
+DOCKED: ATOM     33  C41 UNL     1       7.988   1.714  -1.165 -0.08 +0.00    +0.096 A 
+DOCKED: ATOM     34  C42 UNL     1       8.208   1.344   0.171 -0.19 +0.00    +0.039 A 
+DOCKED: ATOM     35  C44 UNL     1       8.586   1.957   2.508 +1.66 +0.00    +0.014 A 
+DOCKED: ATOM     36  C45 UNL     1       8.747   2.937   3.491 -0.05 +0.00    +0.030 A 
+DOCKED: BRANCH  32  37
+DOCKED: ATOM     37  S4  UNL     1       7.622   3.616  -3.160 -0.21 +0.00    +0.131 S 
+DOCKED: ATOM     38  O15 UNL     1       6.194   3.621  -3.365 -0.03 -0.00    -0.598 OA
+DOCKED: ATOM     39  O16 UNL     1       8.464   4.768  -3.420 -0.03 -0.00    -0.598 OA
+DOCKED: BRANCH  37  40
+DOCKED: ATOM     40  O17 UNL     1       8.179   2.440  -4.110 +1.90 -0.00    -0.292 OA
+DOCKED: ATOM     41  H40 UNL     1       7.535   1.698  -4.075 +0.05 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  37  40
+DOCKED: ENDBRANCH  32  37
+DOCKED: BRANCH  33  42
+DOCKED: ATOM     42  S3  UNL     1       7.841   0.417  -2.375 -0.22 +0.00    +0.131 S 
+DOCKED: ATOM     43  O12 UNL     1       7.563  -0.814  -1.667 -0.26 -0.00    -0.598 OA
+DOCKED: ATOM     44  O13 UNL     1       8.977   0.526  -3.259 -0.42 -0.00    -0.598 OA
+DOCKED: BRANCH  42  45
+DOCKED: ATOM     45  O14 UNL     1       6.516   0.802  -3.211 -0.14 -0.00    -0.292 OA
+DOCKED: ATOM     46  H39 UNL     1       6.290   1.752  -3.031 +0.06 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  42  45
+DOCKED: ENDBRANCH  33  42
+DOCKED: ENDBRANCH  24  27
+DOCKED: ENDBRANCH  19  23
+DOCKED: ENDBRANCH  14  17
+DOCKED: ENDBRANCH   9  13
+DOCKED: ENDBRANCH   2   7
+DOCKED: BRANCH   3  47
+DOCKED: ATOM     47  C12 UNL     1      19.122  11.609   8.361 +8.85 +0.00    +0.111 A 
+DOCKED: ATOM     48  C13 UNL     1      20.059  11.778   7.361+51.52 +0.00    +0.067 A 
+DOCKED: ATOM     49  C14 UNL     1      21.231  11.031   7.685 +3.64 +0.00    +0.051 A 
+DOCKED: ATOM     50  C15 UNL     1      20.980  10.472   8.926 -0.55 +0.00    +0.109 A 
+DOCKED: ATOM     51  N6  UNL     1      19.722  10.862   9.348 +1.86 -0.00    -0.346 N 
+DOCKED: ATOM     52  C16 UNL     1      19.254  10.612  10.696 +9.19 +0.00    +0.157 C 
+DOCKED: BRANCH  49  53
+DOCKED: ATOM     53  C17 UNL     1      22.434  10.930   6.847+44.78 +0.00    +0.258 C 
+DOCKED: ATOM     54  N7  UNL     1      22.220  11.219   5.508+10.46 -0.00    -0.309 N 
+DOCKED: ATOM     55  H34 UNL     1      21.293  11.504   5.233+35.33 +0.00    +0.170 HD
+DOCKED: ATOM     56  O3  UNL     1      23.511  10.620   7.348 +7.14 -0.00    -0.267 OA
+DOCKED: BRANCH  54  57
+DOCKED: ATOM     57  C18 UNL     1      23.213  11.173   4.544 +0.37 +0.00    +0.110 A 
+DOCKED: ATOM     58  C19 UNL     1      23.772  10.107   3.865 -0.56 +0.00    +0.067 A 
+DOCKED: ATOM     59  C20 UNL     1      24.769  10.595   2.967 -0.26 +0.00    +0.051 A 
+DOCKED: ATOM     60  C21 UNL     1      24.772  11.971   3.138+10.19 +0.00    +0.109 A 
+DOCKED: ATOM     61  N8  UNL     1      23.840  12.308   4.082 +3.25 -0.00    -0.346 N 
+DOCKED: ATOM     62  C22 UNL     1      23.581  13.666   4.510+25.70 +0.00    +0.157 C 
+DOCKED: BRANCH  59  63
+DOCKED: ATOM     63  C23 UNL     1      25.649   9.887   2.027 -0.25 +0.00    +0.257 C 
+DOCKED: ATOM     64  N9  UNL     1      26.644   9.146   2.639 -0.29 -0.00    -0.323 N 
+DOCKED: ATOM     65  H35 UNL     1      26.671   9.176   3.648 -0.29 +0.00    +0.169 HD
+DOCKED: ATOM     66  O4  UNL     1      25.473   9.981   0.817 +4.38 -0.00    -0.267 OA
+DOCKED: BRANCH  64  67
+DOCKED: ATOM     67  C24 UNL     1      27.640   8.358   2.024 -0.38 +0.00    +0.035 A 
+DOCKED: ATOM     68  C25 UNL     1      27.268   7.639   0.879 -0.37 +0.00    +0.042 A 
+DOCKED: ATOM     69  C26 UNL     1      28.187   6.824   0.193 -0.28 -0.00    -0.022 A 
+DOCKED: ATOM     70  C27 UNL     1      27.814   6.104  -0.953 -0.26 +0.00    +0.039 A 
+DOCKED: ATOM     71  C31 UNL     1      29.511   6.728   0.668 -0.25 -0.00    -0.024 A 
+DOCKED: ATOM     72  C28 UNL     1      28.741   5.298  -1.632 -0.15 +0.00    +0.096 A 
+DOCKED: ATOM     73  C29 UNL     1      30.052   5.197  -1.154 -0.07 +0.00    +0.096 A 
+DOCKED: ATOM     74  C30 UNL     1      30.433   5.916  -0.011 -0.12 +0.00    +0.039 A 
+DOCKED: ATOM     75  C32 UNL     1      29.878   7.449   1.812 -0.39 +0.00    +0.014 A 
+DOCKED: ATOM     76  C33 UNL     1      28.951   8.255   2.482 +0.30 +0.00    +0.030 A 
+DOCKED: BRANCH  72  77
+DOCKED: ATOM     77  S2  UNL     1      28.170   4.384  -3.049 +0.25 +0.00    +0.131 S 
+DOCKED: ATOM     78  O8  UNL     1      29.054   4.690  -4.153 +0.02 -0.00    -0.598 OA
+DOCKED: ATOM     79  O9  UNL     1      26.747   4.603  -3.153 +5.58 -0.00    -0.598 OA
+DOCKED: BRANCH  77  80
+DOCKED: ATOM     80  O10 UNL     1      28.412   2.840  -2.651 -0.13 -0.00    -0.292 OA
+DOCKED: ATOM     81  H38 UNL     1      27.535   2.419  -2.459 +0.07 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  77  80
+DOCKED: ENDBRANCH  72  77
+DOCKED: BRANCH  73  82
+DOCKED: ATOM     82  S1  UNL     1      31.291   4.243  -1.983 -0.04 +0.00    +0.131 S 
+DOCKED: ATOM     83  O5  UNL     1      32.057   3.534  -0.977 +0.04 -0.00    -0.598 OA
+DOCKED: ATOM     84  O6  UNL     1      31.897   5.071  -2.996 +0.04 -0.00    -0.598 OA
+DOCKED: BRANCH  82  85
+DOCKED: ATOM     85  O7  UNL     1      30.479   3.110  -2.795 -0.03 -0.00    -0.292 OA
+DOCKED: ATOM     86  H37 UNL     1      30.267   3.475  -3.682 +0.05 +0.00    +0.232 HD
+DOCKED: ENDBRANCH  82  85
+DOCKED: ENDBRANCH  73  82
+DOCKED: ENDBRANCH  64  67
+DOCKED: ENDBRANCH  59  63
+DOCKED: ENDBRANCH  54  57
+DOCKED: ENDBRANCH  49  53
+DOCKED: ENDBRANCH   3  47
+DOCKED: TORSDOF 18
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                                    # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 3
+
+RMSD cluster analysis will be performed using the ligand atoms only (86 / 86 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 3,  out of 3 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |  +2208.49 |   1 |  +2208.49 |   1 |#
+   2 |  +2695.97 |   3 |  +2695.97 |   1 |#
+   3 |  +6221.32 |   2 |  +6221.32 |   1 |#
+_____|___________|_____|___________|_____|______________________________________
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      1    +2208.49      0.00      7.20           RANKING
+   2      1      3    +2695.97      0.00     11.83           RANKING
+   3      1      2    +6221.32      0.00     11.19           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 1.00  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =     0.03            at Temperature, T = 298.15 K
+Free energy,        A ~  1992.30 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =  2360.33 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     1.23 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL        1
+USER    Run = 1
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 7.201 A
+USER  
+USER    Estimated Free Energy of Binding    =  +2.21e+003 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =  +2.21e+003 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  +2.21e+003 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  +10.47 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =  +10.47 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ligand_212_receptor.dpf
+USER    NEWDPF move	ligand_212.pdbqt
+USER    NEWDPF about	0.000000 0.000000 0.000000
+USER    NEWDPF tran0	7.010334 4.411608 2.167520
+USER    NEWDPF axisangle0	-0.407291 0.881815 -0.237732 -89.985212
+USER    NEWDPF quaternion0	-0.287961 0.623457 -0.168080 -0.707198
+USER    NEWDPF dihe0	39.78 -136.56 141.93 179.51 -107.22 147.12 140.65 -180.00 107.87 -180.00 -150.46 -150.46 -18.21 -180.00 129.33 163.08 -98.39 -139.01 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C11 UNL     1       7.343   4.564   2.808 -0.05 +0.00    +0.327     7.201
+ATOM      2  N4  UNL     1       6.345   3.860   2.146 -0.02 -0.00    -0.294     7.201
+ATOM      3  N5  UNL     1       6.854   5.016   4.027 -0.08 -0.00    -0.294     7.201
+ATOM      4  O2  UNL     1       8.475   4.756   2.385 -0.10 -0.00    -0.247     7.201
+ATOM      5  H32 UNL     1       5.707   3.370   2.759 +0.07 +0.00    +0.172     7.201
+ATOM      6  H33 UNL     1       5.865   5.232   4.023 +0.08 +0.00    +0.172     7.201
+ATOM      7  C9  UNL     1       6.461   3.343   0.865 -0.06 +0.00    +0.111     7.201
+ATOM      8  C10 UNL     1       7.488   2.527   0.429 -0.10 +0.00    +0.067     7.201
+ATOM      9  C7  UNL     1       7.297   2.233  -0.952 -0.07 +0.00    +0.051     7.201
+ATOM     10  C8  UNL     1       6.100   2.838  -1.296 -0.06 +0.00    +0.109     7.201
+ATOM     11  N3  UNL     1       5.580   3.471  -0.184 -0.02 -0.00    -0.346     7.201
+ATOM     12  C34 UNL     1       4.239   4.019  -0.171 -0.15 +0.00    +0.157     7.201
+ATOM     13  C6  UNL     1       8.188   1.424  -1.792 -0.06 +0.00    +0.258     7.201
+ATOM     14  N2  UNL     1       9.532   1.632  -1.542 -0.06 -0.00    -0.309     7.201
+ATOM     15  H31 UNL     1       9.753   2.101  -0.672 +0.07 +0.00    +0.170     7.201
+ATOM     16  O1  UNL     1       7.720   0.621  -2.590 -0.16 -0.00    -0.267     7.201
+ATOM     17  C5  UNL     1      10.597   1.014  -2.176 -0.25 +0.00    +0.110     7.201
+ATOM     18  C4  UNL     1      11.922   1.204  -1.834 +0.28 +0.00    +0.067     7.201
+ATOM     19  C3  UNL     1      12.746   0.371  -2.645 +0.55 +0.00    +0.051     7.201
+ATOM     20  C2  UNL     1      11.877  -0.267  -3.513 +1.09 +0.00    +0.109     7.201
+ATOM     21  N1  UNL     1      10.587   0.162  -3.258 -0.14 -0.00    -0.346     7.201
+ATOM     22  C1  UNL     1       9.490  -0.159  -4.148 +1.12 +0.00    +0.157     7.201
+ATOM     23  C35 UNL     1      14.208   0.264  -2.551+53.75 +0.00    +0.257     7.201
+ATOM     24  N10 UNL     1      14.731   0.663  -1.334 +5.76 -0.00    -0.323     7.201
+ATOM     25  H36 UNL     1      14.071   1.028  -0.664 -0.38 +0.00    +0.169     7.201
+ATOM     26  O11 UNL     1      14.858  -0.140  -3.509+44.26 -0.00    -0.267     7.201
+ATOM     27  C36 UNL     1      16.082   0.664  -0.930 +4.62 +0.00    +0.035     7.201
+ATOM     28  C37 UNL     1      16.865   1.815  -0.813+31.36 +0.00    +0.042     7.201
+ATOM     29  C38 UNL     1      18.211   1.744  -0.405+99.99 -0.00    -0.022     7.201
+ATOM     30  C39 UNL     1      18.998   2.901  -0.286+94.59 +0.00    +0.039     7.201
+ATOM     31  C43 UNL     1      18.782   0.489  -0.110+99.99 -0.00    -0.024     7.201
+ATOM     32  C40 UNL     1      20.337   2.823   0.124+99.99 +0.00    +0.096     7.201
+ATOM     33  C41 UNL     1      20.905   1.578   0.409+99.99 +0.00    +0.096     7.201
+ATOM     34  C42 UNL     1      20.123   0.417   0.297+99.99 +0.00    +0.039     7.201
+ATOM     35  C44 UNL     1      17.993  -0.663  -0.229+35.23 +0.00    +0.014     7.201
+ATOM     36  C45 UNL     1      16.659  -0.574  -0.634 +8.82 +0.00    +0.030     7.201
+ATOM     37  S4  UNL     1      21.269   4.327   0.195+99.99 +0.00    +0.131     7.201
+ATOM     38  O15 UNL     1      20.595   5.315  -0.611+64.81 -0.00    -0.598     7.201
+ATOM     39  O16 UNL     1      21.646   4.553   1.577+99.99 -0.00    -0.598     7.201
+ATOM     40  O17 UNL     1      22.641   4.010  -0.589+99.99 -0.00    -0.292     7.201
+ATOM     41  H40 UNL     1      23.154   4.846  -0.642 +0.27 +0.00    +0.232     7.201
+ATOM     42  S3  UNL     1      22.583   1.400   0.977+99.99 +0.00    +0.131     7.201
+ATOM     43  O12 UNL     1      23.393   2.362   0.262+10.67 -0.00    -0.598     7.201
+ATOM     44  O13 UNL     1      22.897  -0.009   0.945+46.54 -0.00    -0.598     7.201
+ATOM     45  O14 UNL     1      22.531   1.866   2.521 +2.00 -0.00    -0.292     7.201
+ATOM     46  H39 UNL     1      22.150   2.781   2.566 +0.13 +0.00    +0.232     7.201
+ATOM     47  C12 UNL     1       7.605   5.680   4.984 -0.11 +0.00    +0.111     7.201
+ATOM     48  C13 UNL     1       8.872   6.192   4.782 -0.07 +0.00    +0.067     7.201
+ATOM     49  C14 UNL     1       9.347   6.764   6.000 +5.48 +0.00    +0.051     7.201
+ATOM     50  C15 UNL     1       8.305   6.629   6.901+24.28 +0.00    +0.109     7.201
+ATOM     51  N6  UNL     1       7.240   6.015   6.268 +0.61 -0.00    -0.346     7.201
+ATOM     52  C16 UNL     1       5.932   5.921   6.883 -0.32 +0.00    +0.157     7.201
+ATOM     53  C17 UNL     1      10.669   7.375   6.194 -0.10 +0.00    +0.258     7.201
+ATOM     54  N7  UNL     1      11.550   7.170   5.144 -0.15 -0.00    -0.309     7.201
+ATOM     55  H34 UNL     1      11.210   6.667   4.339 +0.11 +0.00    +0.170     7.201
+ATOM     56  O3  UNL     1      10.911   8.010   7.217 +1.57 -0.00    -0.267     7.201
+ATOM     57  C18 UNL     1      12.849   7.649   5.126 -0.33 +0.00    +0.110     7.201
+ATOM     58  C19 UNL     1      13.837   7.561   4.163 -0.43 +0.00    +0.067     7.201
+ATOM     59  C20 UNL     1      15.010   8.225   4.634 -0.34 +0.00    +0.051     7.201
+ATOM     60  C21 UNL     1      14.678   8.705   5.891+14.48 +0.00    +0.109     7.201
+ATOM     61  N8  UNL     1      13.385   8.356   6.178 -0.13 -0.00    -0.346     7.201
+ATOM     62  C22 UNL     1      12.715   8.694   7.415 -0.43 +0.00    +0.157     7.201
+ATOM     63  C23 UNL     1      16.325   8.418   4.008 -0.38 +0.00    +0.257     7.201
+ATOM     64  N9  UNL     1      17.363   8.556   4.911 +0.56 -0.00    -0.323     7.201
+ATOM     65  H35 UNL     1      17.115   8.521   5.889 +2.09 +0.00    +0.169     7.201
+ATOM     66  O4  UNL     1      16.435   8.449   2.787 -0.39 -0.00    -0.267     7.201
+ATOM     67  C24 UNL     1      18.733   8.751   4.634 +1.30 +0.00    +0.035     7.201
+ATOM     68  C25 UNL     1      19.109   8.808   3.285 -0.36 +0.00    +0.042     7.201
+ATOM     69  C26 UNL     1      20.450   9.000   2.905 -0.11 -0.00    -0.022     7.201
+ATOM     70  C27 UNL     1      20.827   9.058   1.553 +3.51 +0.00    +0.039     7.201
+ATOM     71  C31 UNL     1      21.437   9.135   3.902 +0.91 -0.00    -0.024     7.201
+ATOM     72  C28 UNL     1      22.168   9.252   1.185 -0.33 +0.00    +0.096     7.201
+ATOM     73  C29 UNL     1      23.146   9.379   2.177 -0.37 +0.00    +0.096     7.201
+ATOM     74  C30 UNL     1      22.777   9.325   3.529 -0.45 +0.00    +0.039     7.201
+ATOM     75  C32 UNL     1      21.056   9.077   5.250+30.91 +0.00    +0.014     7.201
+ATOM     76  C33 UNL     1      19.717   8.887   5.610+39.11 +0.00    +0.030     7.201
+ATOM     77  S2  UNL     1      22.562   9.266  -0.551 -0.15 +0.00    +0.131     7.201
+ATOM     78  O8  UNL     1      23.493  10.351  -0.780 +1.76 -0.00    -0.598     7.201
+ATOM     79  O9  UNL     1      21.314   9.192  -1.273 +7.22 -0.00    -0.598     7.201
+ATOM     80  O10 UNL     1      23.361   7.886  -0.788 -0.35 -0.00    -0.292     7.201
+ATOM     81  H38 UNL     1      24.143   8.066  -1.371 +0.17 +0.00    +0.232     7.201
+ATOM     82  S1  UNL     1      24.848   9.678   1.794 -0.54 +0.00    +0.131     7.201
+ATOM     83  O5  UNL     1      25.656   8.863   2.679 -0.17 -0.00    -0.598     7.201
+ATOM     84  O6  UNL     1      25.035  11.101   1.645 +0.61 -0.00    -0.598     7.201
+ATOM     85  O7  UNL     1      25.062   9.068   0.317 +0.35 -0.00    -0.292     7.201
+ATOM     86  H37 UNL     1      24.556   8.227   0.266 +0.18 +0.00    +0.232     7.201
+TER
+ENDMDL
+MODEL        3
+USER    Run = 3
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 11.826 A
+USER  
+USER    Estimated Free Energy of Binding    =  +2.70e+003 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =  +2.69e+003 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  +2.69e+003 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -4.68 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -4.68 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ligand_212_receptor.dpf
+USER    NEWDPF move	ligand_212.pdbqt
+USER    NEWDPF about	0.000000 0.000000 0.000000
+USER    NEWDPF tran0	16.009401 11.649917 7.907076
+USER    NEWDPF axisangle0	0.154853 -0.713080 0.683767 171.563494
+USER    NEWDPF quaternion0	0.154433 -0.711149 0.681915 0.073556
+USER    NEWDPF dihe0	-59.58 -64.66 25.85 -51.31 177.37 21.09 130.60 -179.51 137.29 142.76 180.00 -68.96 8.31 78.06 40.91 151.82 -102.90 -44.09 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C11 UNL     1      16.678  11.444   8.141+83.56 +0.00    +0.327    11.826
+ATOM      2  N4  UNL     1      15.587  12.288   8.310+11.46 -0.00    -0.294    11.826
+ATOM      3  N5  UNL     1      17.850  12.158   8.360+36.32 -0.00    -0.294    11.826
+ATOM      4  O2  UNL     1      16.617  10.257   7.847+99.99 -0.00    -0.247    11.826
+ATOM      5  H32 UNL     1      15.730  13.018   8.996+63.62 +0.00    +0.172    11.826
+ATOM      6  H33 UNL     1      17.795  13.133   8.096 +0.56 +0.00    +0.172    11.826
+ATOM      7  C9  UNL     1      14.268  11.928   8.083 +0.17 +0.00    +0.111    11.826
+ATOM      8  C10 UNL     1      13.668  10.776   8.555 +0.23 +0.00    +0.067    11.826
+ATOM      9  C7  UNL     1      12.324  10.723   8.085 +2.64 +0.00    +0.051    11.826
+ATOM     10  C8  UNL     1      12.130  11.902   7.386+99.99 +0.00    +0.109    11.826
+ATOM     11  N3  UNL     1      13.295  12.644   7.425 +4.22 -0.00    -0.346    11.826
+ATOM     12  C34 UNL     1      13.346  14.015   6.960+99.99 +0.00    +0.157    11.826
+ATOM     13  C6  UNL     1      11.365   9.641   8.340 +3.94 +0.00    +0.258    11.826
+ATOM     14  N2  UNL     1      10.774   9.137   7.197 +0.62 -0.00    -0.309    11.826
+ATOM     15  H31 UNL     1      11.230   9.371   6.324 +0.25 +0.00    +0.170    11.826
+ATOM     16  O1  UNL     1      11.186   9.236   9.483+99.99 -0.00    -0.267    11.826
+ATOM     17  C5  UNL     1       9.837   8.120   7.130+26.10 +0.00    +0.110    11.826
+ATOM     18  C4  UNL     1       9.706   7.252   6.062 +8.00 +0.00    +0.067    11.826
+ATOM     19  C3  UNL     1       8.690   6.295   6.350 +3.68 +0.00    +0.051    11.826
+ATOM     20  C2  UNL     1       8.185   6.660   7.585 +9.86 +0.00    +0.109    11.826
+ATOM     21  N1  UNL     1       8.846   7.791   8.029+76.22 -0.00    -0.346    11.826
+ATOM     22  C1  UNL     1       8.388   8.535   9.183+99.99 +0.00    +0.157    11.826
+ATOM     23  C35 UNL     1       8.289   5.186   5.473 -0.19 +0.00    +0.257    11.826
+ATOM     24  N10 UNL     1       8.864   5.217   4.216 -0.07 -0.00    -0.323    11.826
+ATOM     25  H36 UNL     1       9.452   6.013   4.015 +0.10 +0.00    +0.169    11.826
+ATOM     26  O11 UNL     1       7.498   4.340   5.875 -0.23 -0.00    -0.267    11.826
+ATOM     27  C36 UNL     1       8.696   4.295   3.162 -0.20 +0.00    +0.035    11.826
+ATOM     28  C37 UNL     1       8.479   4.656   1.830 -0.13 +0.00    +0.042    11.826
+ATOM     29  C38 UNL     1       8.316   3.682   0.827 -0.12 -0.00    -0.022    11.826
+ATOM     30  C39 UNL     1       8.101   4.045  -0.512 -0.10 +0.00    +0.039    11.826
+ATOM     31  C43 UNL     1       8.370   2.315   1.171 -0.21 -0.00    -0.024    11.826
+ATOM     32  C40 UNL     1       7.943   3.069  -1.507 -0.07 +0.00    +0.096    11.826
+ATOM     33  C41 UNL     1       7.988   1.714  -1.165 -0.08 +0.00    +0.096    11.826
+ATOM     34  C42 UNL     1       8.208   1.344   0.171 -0.19 +0.00    +0.039    11.826
+ATOM     35  C44 UNL     1       8.586   1.957   2.508 +1.66 +0.00    +0.014    11.826
+ATOM     36  C45 UNL     1       8.747   2.937   3.491 -0.05 +0.00    +0.030    11.826
+ATOM     37  S4  UNL     1       7.622   3.616  -3.160 -0.21 +0.00    +0.131    11.826
+ATOM     38  O15 UNL     1       6.194   3.621  -3.365 -0.03 -0.00    -0.598    11.826
+ATOM     39  O16 UNL     1       8.464   4.768  -3.420 -0.03 -0.00    -0.598    11.826
+ATOM     40  O17 UNL     1       8.179   2.440  -4.110 +1.90 -0.00    -0.292    11.826
+ATOM     41  H40 UNL     1       7.535   1.698  -4.075 +0.05 +0.00    +0.232    11.826
+ATOM     42  S3  UNL     1       7.841   0.417  -2.375 -0.22 +0.00    +0.131    11.826
+ATOM     43  O12 UNL     1       7.563  -0.814  -1.667 -0.26 -0.00    -0.598    11.826
+ATOM     44  O13 UNL     1       8.977   0.526  -3.259 -0.42 -0.00    -0.598    11.826
+ATOM     45  O14 UNL     1       6.516   0.802  -3.211 -0.14 -0.00    -0.292    11.826
+ATOM     46  H39 UNL     1       6.290   1.752  -3.031 +0.06 +0.00    +0.232    11.826
+ATOM     47  C12 UNL     1      19.122  11.609   8.361 +8.85 +0.00    +0.111    11.826
+ATOM     48  C13 UNL     1      20.059  11.778   7.361+51.52 +0.00    +0.067    11.826
+ATOM     49  C14 UNL     1      21.231  11.031   7.685 +3.64 +0.00    +0.051    11.826
+ATOM     50  C15 UNL     1      20.980  10.472   8.926 -0.55 +0.00    +0.109    11.826
+ATOM     51  N6  UNL     1      19.722  10.862   9.348 +1.86 -0.00    -0.346    11.826
+ATOM     52  C16 UNL     1      19.254  10.612  10.696 +9.19 +0.00    +0.157    11.826
+ATOM     53  C17 UNL     1      22.434  10.930   6.847+44.78 +0.00    +0.258    11.826
+ATOM     54  N7  UNL     1      22.220  11.219   5.508+10.46 -0.00    -0.309    11.826
+ATOM     55  H34 UNL     1      21.293  11.504   5.233+35.33 +0.00    +0.170    11.826
+ATOM     56  O3  UNL     1      23.511  10.620   7.348 +7.14 -0.00    -0.267    11.826
+ATOM     57  C18 UNL     1      23.213  11.173   4.544 +0.37 +0.00    +0.110    11.826
+ATOM     58  C19 UNL     1      23.772  10.107   3.865 -0.56 +0.00    +0.067    11.826
+ATOM     59  C20 UNL     1      24.769  10.595   2.967 -0.26 +0.00    +0.051    11.826
+ATOM     60  C21 UNL     1      24.772  11.971   3.138+10.19 +0.00    +0.109    11.826
+ATOM     61  N8  UNL     1      23.840  12.308   4.082 +3.25 -0.00    -0.346    11.826
+ATOM     62  C22 UNL     1      23.581  13.666   4.510+25.70 +0.00    +0.157    11.826
+ATOM     63  C23 UNL     1      25.649   9.887   2.027 -0.25 +0.00    +0.257    11.826
+ATOM     64  N9  UNL     1      26.644   9.146   2.639 -0.29 -0.00    -0.323    11.826
+ATOM     65  H35 UNL     1      26.671   9.176   3.648 -0.29 +0.00    +0.169    11.826
+ATOM     66  O4  UNL     1      25.473   9.981   0.817 +4.38 -0.00    -0.267    11.826
+ATOM     67  C24 UNL     1      27.640   8.358   2.024 -0.38 +0.00    +0.035    11.826
+ATOM     68  C25 UNL     1      27.268   7.639   0.879 -0.37 +0.00    +0.042    11.826
+ATOM     69  C26 UNL     1      28.187   6.824   0.193 -0.28 -0.00    -0.022    11.826
+ATOM     70  C27 UNL     1      27.814   6.104  -0.953 -0.26 +0.00    +0.039    11.826
+ATOM     71  C31 UNL     1      29.511   6.728   0.668 -0.25 -0.00    -0.024    11.826
+ATOM     72  C28 UNL     1      28.741   5.298  -1.632 -0.15 +0.00    +0.096    11.826
+ATOM     73  C29 UNL     1      30.052   5.197  -1.154 -0.07 +0.00    +0.096    11.826
+ATOM     74  C30 UNL     1      30.433   5.916  -0.011 -0.12 +0.00    +0.039    11.826
+ATOM     75  C32 UNL     1      29.878   7.449   1.812 -0.39 +0.00    +0.014    11.826
+ATOM     76  C33 UNL     1      28.951   8.255   2.482 +0.30 +0.00    +0.030    11.826
+ATOM     77  S2  UNL     1      28.170   4.384  -3.049 +0.25 +0.00    +0.131    11.826
+ATOM     78  O8  UNL     1      29.054   4.690  -4.153 +0.02 -0.00    -0.598    11.826
+ATOM     79  O9  UNL     1      26.747   4.603  -3.153 +5.58 -0.00    -0.598    11.826
+ATOM     80  O10 UNL     1      28.412   2.840  -2.651 -0.13 -0.00    -0.292    11.826
+ATOM     81  H38 UNL     1      27.535   2.419  -2.459 +0.07 +0.00    +0.232    11.826
+ATOM     82  S1  UNL     1      31.291   4.243  -1.983 -0.04 +0.00    +0.131    11.826
+ATOM     83  O5  UNL     1      32.057   3.534  -0.977 +0.04 -0.00    -0.598    11.826
+ATOM     84  O6  UNL     1      31.897   5.071  -2.996 +0.04 -0.00    -0.598    11.826
+ATOM     85  O7  UNL     1      30.479   3.110  -2.795 -0.03 -0.00    -0.292    11.826
+ATOM     86  H37 UNL     1      30.267   3.475  -3.682 +0.05 +0.00    +0.232    11.826
+TER
+ENDMDL
+MODEL        2
+USER    Run = 2
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 11.191 A
+USER  
+USER    Estimated Free Energy of Binding    =  +6.22e+003 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =  +6.22e+003 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  +6.22e+003 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -3.02 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -3.02 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ligand_212_receptor.dpf
+USER    NEWDPF move	ligand_212.pdbqt
+USER    NEWDPF about	0.000000 0.000000 0.000000
+USER    NEWDPF tran0	21.192629 10.793522 -0.769712
+USER    NEWDPF axisangle0	-0.797395 0.113675 0.592655 67.592266
+USER    NEWDPF quaternion0	-0.443542 0.063230 0.329658 0.831022
+USER    NEWDPF dihe0	93.32 -180.00 170.77 -29.40 18.16 -120.84 145.34 -180.00 180.00 20.65 154.04 -13.44 163.80 -18.14 -70.52 -72.97 -137.27 179.15 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C11 UNL     1      20.463  10.723  -0.681 +7.58 +0.00    +0.327    11.191
+ATOM      2  N4  UNL     1      21.513  11.050  -1.530+99.99 -0.00    -0.294    11.191
+ATOM      3  N5  UNL     1      19.410  11.603  -0.893 +0.43 -0.00    -0.294    11.191
+ATOM      4  O2  UNL     1      20.466   9.804   0.127 -0.26 -0.00    -0.247    11.191
+ATOM      5  H32 UNL     1      21.222  11.440  -2.417+99.99 +0.00    +0.172    11.191
+ATOM      6  H33 UNL     1      19.696  12.534  -1.167 +0.20 +0.00    +0.172    11.191
+ATOM      7  C9  UNL     1      22.754  10.433  -1.526+22.05 +0.00    +0.111    11.191
+ATOM      8  C10 UNL     1      23.049   9.249  -0.878 +0.53 +0.00    +0.067    11.191
+ATOM      9  C7  UNL     1      24.431   8.949  -1.056 +3.81 +0.00    +0.051    11.191
+ATOM     10  C8  UNL     1      24.922   9.949  -1.879+99.99 +0.00    +0.109    11.191
+ATOM     11  N3  UNL     1      23.895  10.817  -2.193 +8.20 -0.00    -0.346    11.191
+ATOM     12  C34 UNL     1      24.044  11.849  -3.199+99.99 +0.00    +0.157    11.191
+ATOM     13  C6  UNL     1      25.140   7.794  -0.495 -0.18 +0.00    +0.258    11.191
+ATOM     14  N2  UNL     1      25.721   6.979  -1.448 -0.16 -0.00    -0.309    11.191
+ATOM     15  H31 UNL     1      25.819   7.379  -2.372 +0.14 +0.00    +0.170    11.191
+ATOM     16  O1  UNL     1      25.214   7.648   0.720 -0.24 -0.00    -0.267    11.191
+ATOM     17  C5  UNL     1      26.450   5.824  -1.216 -0.30 +0.00    +0.110    11.191
+ATOM     18  C4  UNL     1      26.611   5.243   0.028 -0.32 +0.00    +0.067    11.191
+ATOM     19  C3  UNL     1      27.362   4.039  -0.105 -0.22 +0.00    +0.051    11.191
+ATOM     20  C2  UNL     1      27.691   3.960  -1.446 -0.22 +0.00    +0.109    11.191
+ATOM     21  N1  UNL     1      27.180   5.064  -2.103 -0.06 -0.00    -0.346    11.191
+ATOM     22  C1  UNL     1      27.549   5.373  -3.470+66.77 +0.00    +0.157    11.191
+ATOM     23  C35 UNL     1      27.704   3.122   0.991+24.17 +0.00    +0.257    11.191
+ATOM     24  N10 UNL     1      27.930   3.744   2.206+99.99 -0.00    -0.323    11.191
+ATOM     25  H36 UNL     1      27.887   4.752   2.204+97.48 +0.00    +0.169    11.191
+ATOM     26  O11 UNL     1      27.780   1.916   0.782+12.45 -0.00    -0.267    11.191
+ATOM     27  C36 UNL     1      28.258   3.145   3.439+99.99 +0.00    +0.035    11.191
+ATOM     28  C37 UNL     1      28.512   3.856   4.614+99.99 +0.00    +0.042    11.191
+ATOM     29  C38 UNL     1      28.836   3.192   5.813+41.33 -0.00    -0.022    11.191
+ATOM     30  C39 UNL     1      29.089   3.907   6.995+36.80 +0.00    +0.039    11.191
+ATOM     31  C43 UNL     1      28.910   1.784   5.830 +1.83 -0.00    -0.024    11.191
+ATOM     32  C40 UNL     1      29.408   3.239   8.187+99.99 +0.00    +0.096    11.191
+ATOM     33  C41 UNL     1      29.489   1.844   8.201+99.99 +0.00    +0.096    11.191
+ATOM     34  C42 UNL     1      29.233   1.122   7.024+61.92 +0.00    +0.039    11.191
+ATOM     35  C44 UNL     1      28.656   1.075   4.649+53.66 +0.00    +0.014    11.191
+ATOM     36  C45 UNL     1      28.334   1.749   3.468+70.88 +0.00    +0.030    11.191
+ATOM     37  S4  UNL     1      29.764   4.222   9.616+99.99 +0.00    +0.131    11.191
+ATOM     38  O15 UNL     1      28.642   4.131  10.518+79.11 -0.00    -0.598    11.191
+ATOM     39  O16 UNL     1      31.129   3.946  10.019 +2.37 -0.00    -0.598    11.191
+ATOM     40  O17 UNL     1      29.759   5.746   9.092+13.06 -0.00    -0.292    11.191
+ATOM     41  H40 UNL     1      30.574   6.180   9.429 +0.62 +0.00    +0.232    11.191
+ATOM     42  S3  UNL     1      29.845   0.922   9.682+96.19 +0.00    +0.131    11.191
+ATOM     43  O12 UNL     1      28.898   1.335  10.695+99.99 -0.00    -0.598    11.191
+ATOM     44  O13 UNL     1      31.267   1.014   9.911+99.99 -0.00    -0.598    11.191
+ATOM     45  O14 UNL     1      29.499  -0.605   9.292+99.99 -0.00    -0.292    11.191
+ATOM     46  H39 UNL     1      28.595  -0.826   9.638 +0.17 +0.00    +0.232    11.191
+ATOM     47  C12 UNL     1      18.171  11.515  -0.279 +1.99 +0.00    +0.111    11.191
+ATOM     48  C13 UNL     1      17.570  10.341   0.132 -0.39 +0.00    +0.067    11.191
+ATOM     49  C14 UNL     1      16.286  10.637   0.680 -0.40 +0.00    +0.051    11.191
+ATOM     50  C15 UNL     1      16.175  12.016   0.634 -0.03 +0.00    +0.109    11.191
+ATOM     51  N6  UNL     1      17.335  12.543   0.096 +4.76 -0.00    -0.346    11.191
+ATOM     52  C16 UNL     1      17.610  13.965   0.109+99.99 +0.00    +0.157    11.191
+ATOM     53  C17 UNL     1      15.330   9.645   1.190 +9.94 +0.00    +0.258    11.191
+ATOM     54  N7  UNL     1      15.101   9.727   2.555 +0.17 -0.00    -0.309    11.191
+ATOM     55  H34 UNL     1      15.565  10.461   3.064 +0.08 +0.00    +0.170    11.191
+ATOM     56  O3  UNL     1      14.803   8.845   0.423+13.30 -0.00    -0.267    11.191
+ATOM     57  C18 UNL     1      14.245   8.882   3.242 +0.19 +0.00    +0.110    11.191
+ATOM     58  C19 UNL     1      13.245   8.040   2.792 +1.02 +0.00    +0.067    11.191
+ATOM     59  C20 UNL     1      12.652   7.380   3.911 -0.40 +0.00    +0.051    11.191
+ATOM     60  C21 UNL     1      13.335   7.854   5.020 -0.35 +0.00    +0.109    11.191
+ATOM     61  N8  UNL     1      14.285   8.752   4.611 -0.11 -0.00    -0.346    11.191
+ATOM     62  C22 UNL     1      15.179   9.445   5.514+13.59 +0.00    +0.157    11.191
+ATOM     63  C23 UNL     1      11.561   6.398   3.982 -0.22 +0.00    +0.257    11.191
+ATOM     64  N9  UNL     1      10.804   6.313   2.827 -0.14 -0.00    -0.323    11.191
+ATOM     65  H35 UNL     1      11.068   6.929   2.072 +0.09 +0.00    +0.169    11.191
+ATOM     66  O4  UNL     1      11.380   5.741   5.001 -0.19 -0.00    -0.267    11.191
+ATOM     67  C24 UNL     1       9.698   5.475   2.575 -0.18 +0.00    +0.035    11.191
+ATOM     68  C25 UNL     1       9.368   5.240   1.232 -0.14 +0.00    +0.042    11.191
+ATOM     69  C26 UNL     1       8.283   4.418   0.877 -0.12 -0.00    -0.022    11.191
+ATOM     70  C27 UNL     1       7.953   4.182  -0.468 -0.10 +0.00    +0.039    11.191
+ATOM     71  C31 UNL     1       7.510   3.819   1.892 -0.13 -0.00    -0.024    11.191
+ATOM     72  C28 UNL     1       6.870   3.358  -0.811 -0.06 +0.00    +0.096    11.191
+ATOM     73  C29 UNL     1       6.100   2.771   0.198 -0.07 +0.00    +0.096    11.191
+ATOM     74  C30 UNL     1       6.426   2.998   1.543 -0.11 +0.00    +0.039    11.191
+ATOM     75  C32 UNL     1       7.844   4.056   3.232 -0.21 +0.00    +0.014    11.191
+ATOM     76  C33 UNL     1       8.928   4.876   3.569 -0.21 +0.00    +0.030    11.191
+ATOM     77  S2  UNL     1       6.495   3.152  -2.539 -0.16 +0.00    +0.131    11.191
+ATOM     78  O8  UNL     1       6.099   1.774  -2.741 +0.03 -0.00    -0.598    11.191
+ATOM     79  O9  UNL     1       7.589   3.727  -3.286 -0.04 -0.00    -0.598    11.191
+ATOM     80  O10 UNL     1       5.190   4.069  -2.775 +0.05 -0.00    -0.292    11.191
+ATOM     81  H38 UNL     1       4.404   3.478  -2.905 +0.02 +0.00    +0.232    11.191
+ATOM     82  S1  UNL     1       4.753   1.678  -0.154 -0.17 +0.00    +0.131    11.191
+ATOM     83  O5  UNL     1       3.670   1.996   0.754 +0.01 -0.00    -0.598    11.191
+ATOM     84  O6  UNL     1       5.281   0.345  -0.315 +0.23 -0.00    -0.598    11.191
+ATOM     85  O7  UNL     1       4.235   2.105  -1.621 -0.04 -0.00    -0.292    11.191
+ATOM     86  H37 UNL     1       4.454   1.372  -2.238 +0.05 +0.00    +0.232    11.191
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=86          # atoms
+AVSFLD: dim2=3           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = ligand_212_receptor.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			0:58 11" a.m., 01/29/2025
+
+
+________________________________________________________________________________
+
+autodock4: Successful Completion on "LPT00508"
+
+Real= 6m 19.59s,  CPU= 4m 50.91s,  System= 2.31s
+________________________________________________________________________________
+
